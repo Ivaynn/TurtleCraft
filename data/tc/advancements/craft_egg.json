@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tc:turtle_egg"
+      }
+    }
+  },
+  "rewards": {
+    "function": "tc:crafted_egg"
+  }
+}

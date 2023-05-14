@@ -1,0 +1,16 @@
+{
+  "values":[
+	"minecraft:oak_log",
+	"minecraft:oak_wood",
+	"minecraft:spruce_log",
+	"minecraft:spruce_wood",
+	"minecraft:birch_log",
+	"minecraft:birch_wood",
+	"minecraft:jungle_log",
+	"minecraft:jungle_wood",
+	"minecraft:acacia_log",
+	"minecraft:acacia_wood",
+	"minecraft:dark_oak_log",
+	"minecraft:dark_oak_wood"
+  ]
+}

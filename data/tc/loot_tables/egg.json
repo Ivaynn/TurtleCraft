@@ -1,0 +1,31 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:silverfish_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{tc:\"egg\",Enchantments:[{}],EntityTag:{id:\"minecraft:marker\",Tags:[\"turtle\",\"tc.egg\"]},display:{Name:'{\"text\":\"Turtle\"}', Lore:['{\"text\":\"Turtle Spawn Egg\",\"color\":\"dark_aqua\",\"italic\":false}']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$egg_item_count"
+                },
+                "score": "tc.tmp"
+              },
+              "add": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
