@@ -20,7 +20,7 @@ Please note that this is an ongoing project that will be improved over time. If 
 
 ## Features
 
-- Turtles that can be programmed to automade tasks
+- Turtles that can be programmed to automate tasks
 - Support for multiple turtles working together
 - In-game program editor using chat menus
 - Basic instructions for mining, farming, building, etc.
