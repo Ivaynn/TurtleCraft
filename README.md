@@ -13,9 +13,15 @@ Please note that this is an ongoing project that will be improved over time. If 
   <img src="pack.png" width="100" title="This is a turtle">
 </p>
 
-## Download - [releases](https://github.com/Ivaynn/TurtleCraft/releases)
 
-## More information - [wiki](https://github.com/Ivaynn/TurtleCraft/wiki)
+
+## Download
+- [Releases Page](https://github.com/Ivaynn/TurtleCraft/releases)
+- [Planet Minecraft](https://www.planetminecraft.com/data-pack/turtlecraft-programmable-turtles/)
+
+## More information
+- [Wiki](https://github.com/Ivaynn/TurtleCraft/wiki)
+- [Introduction video](https://youtu.be/b-ld-X8mnps)
 
 
 ## Features
@@ -34,12 +40,16 @@ Please note that this is an ongoing project that will be improved over time. If 
 - Compatible with Minecraft 1.19.4 and both singleplayer and multiplayer
 
 
+
+
 # Compatibility Notes
 
-- Tested in 1.19.4 (vanilla, spigot, and paper)
+- Tested in Minecraft Java Edition 1.19.4. Not compatible with previous versions.
 - Every scoreboard objective, tag and data storage uses the `tc` prefix
 - Blocks at `10028 0 10028` and `10028 1 10028` in every vanilla dimension are replaced with bedrock when the data pack needs to use them. These chunks are force loaded
 - Some parts of this data pack need to be updated for every new Minecraft version, making it incompatible until a new version of the data pack is released
+
+
 
 
 # License
