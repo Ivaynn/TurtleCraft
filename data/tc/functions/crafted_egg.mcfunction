@@ -1,8 +1,10 @@
 # Triggered by an advancement
 advancement revoke @s only tc:craft_egg
-
+advancement revoke @s only tc:craft_egg_deep
 
 recipe take @s tc:turtle_egg
+recipe take @s tc:deepslate_egg
+
 playsound minecraft:entity.item.pickup neutral @s ~ ~ ~ 1 1.4
 
 
