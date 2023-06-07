@@ -37,14 +37,16 @@ Please note that this is an ongoing project that will be improved over time. If 
 - Customization options for the turtle's appearance and behavior
 - Performance options to optimize the data pack for your use
 - A comprehensive [wiki](https://github.com/Ivaynn/TurtleCraft/wiki) with examples and tutorials
-- Compatible with Minecraft 1.19.4 and both singleplayer and multiplayer
+- Made for Java Edition, starting on 1.19.4 (singleplayer and multiplayer)
 
 
 
 
 # Compatibility Notes
 
-- Tested in Minecraft Java Edition 1.19.4. Not compatible with previous versions.
+- Java Edition 1.19.4 -> TurtleCraft 1.0
+- Java Edition 1.20 -> Not available yet
+- Data pack not available for older versions
 - Every scoreboard objective, tag and data storage uses the `tc` prefix
 - Blocks at `10028 0 10028` and `10028 1 10028` in every vanilla dimension are replaced with bedrock when the data pack needs to use them. These chunks are force loaded
 - Some parts of this data pack need to be updated for every new Minecraft version, making it incompatible until a new version of the data pack is released

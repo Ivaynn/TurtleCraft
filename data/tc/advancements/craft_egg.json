@@ -1,9 +1,9 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:recipe_unlocked",
+      "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe": "tc:turtle_egg"
+        "recipe_id": "tc:turtle_egg"
       }
     }
   },

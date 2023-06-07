@@ -16,9 +16,7 @@ loot insert 10028 0 10028 mine 10028 1 10028 minecraft:air{drop_contents:1b}
 # Drop: Egg
 setblock 10028 1 10028 minecraft:bedrock
 setblock 10028 1 10028 minecraft:yellow_shulker_box
-scoreboard players set $egg_item_count tc.tmp 1
 loot insert 10028 1 10028 loot tc:egg
-scoreboard players reset $egg_item_count tc.tmp
 data modify block 10028 1 10028 Items[0].tag.display.Name set from entity @s CustomName
 data modify block 10028 1 10028 Items[0].tag.EntityTag.data.Instructions set from entity @s ArmorItems[0].tag.Instructions
 execute store result block 10028 1 10028 Items[0].tag.EntityTag.data.Fuel int 1 run scoreboard players get @s tc.fuel
