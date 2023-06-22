@@ -3,6 +3,6 @@
 	"#tc:air",
 	"minecraft:water",
 	"minecraft:lava",
-	"#minecraft:replaceable_plants"
+	"#minecraft:replaceable"
   ]
 }
