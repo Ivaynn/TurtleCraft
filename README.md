@@ -44,8 +44,8 @@ Please note that this is an ongoing project that will be improved over time. If 
 
 # Compatibility Notes
 
-- Java Edition 1.19.4 -> TurtleCraft 1.0
-- Java Edition 1.20 -> Not available yet
+- Java Edition 1.19.4 -> [TurtleCraft 1.0](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.0)
+- Java Edition 1.20 -> [TurtleCraft 1.0.1](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.0.1)
 - Data pack not available for older versions
 - Every scoreboard objective, tag and data storage uses the `tc` prefix
 - Blocks at `10028 0 10028` and `10028 1 10028` in every vanilla dimension are replaced with bedrock when the data pack needs to use them. These chunks are force loaded
