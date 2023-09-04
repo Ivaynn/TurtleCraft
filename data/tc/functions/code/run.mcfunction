@@ -178,7 +178,7 @@ execute if score $chunk_loaded tc.tmp matches 0 run scoreboard players reset @s 
 
 
 # If something went wrong, pause and revert to previous line (next action turtle will try this again)
-execute if score $error_pause tc.tmp matches 1 if score @s tc.msg matches 1.. run function tc:code/pause
+execute if score $error_pause tc.tmp matches 1 if score @s tc.msg matches 1.. unless score @s tc.msg matches 7..8 run function tc:code/pause
 execute if score $error_pause tc.tmp matches 1 unless score $command tc.tmp matches 97 if score @s tc.msg matches 1.. run scoreboard players operation @s tc.line = $prev_line tc.tmp
 execute if score $error_pause tc.tmp matches 1 if score @s tc.msg matches 1.. if score @s tc.fuel matches 1.. if score use_fuel tc.options matches 1 if score $command tc.tmp matches 1..10 run scoreboard players add @s tc.fuel 1
 
