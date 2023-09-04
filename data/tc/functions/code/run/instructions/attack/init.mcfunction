@@ -1,5 +1,6 @@
 # Executed by tc.body at attack block coordinates. All turtle entities have "tc.tmp"
 
+execute if score $chunk_loaded tc.tmp matches 1 unless loaded ~ ~ ~ run scoreboard players set $chunk_loaded tc.tmp 0
 
 # Get Attack Damage from weapon
 scoreboard players set $damage tc.tmp 10

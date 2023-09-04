@@ -1,5 +1,11 @@
 # Executed by tc.body - all attached entities have "tc.tmp"
 
+
+# Check forceloaded chunks
+execute unless loaded 10028 ~ 10028 run function tc:forceload
+execute unless loaded 10028 ~ 10028 run return 0
+
+
 # Dismount player riding
 execute unless score ride_turtles tc.options matches 1 on passengers if entity @s[type=minecraft:player] run ride @s dismount
 
@@ -56,6 +62,7 @@ execute if score $auto_fuel tc.tmp matches 1 if score use_fuel tc.options matche
 
 
 ## RUN INSTRUCTION
+scoreboard players set $chunk_loaded tc.tmp 1
 
 # move (1)
 execute if score $command tc.tmp matches 1 if data storage tc:tmp {run_line:{A:{direction:"forward"}}} at @s positioned ^ ^ ^1 run function tc:code/run/instructions/move
@@ -163,6 +170,13 @@ execute if score $command tc.tmp matches 99 at @s run function tc:entity/remove/
 
 
 ## AFTER RUNNING
+
+# If chunks aren't loaded, retry
+execute if score $chunk_loaded tc.tmp matches 0 run scoreboard players operation @s tc.line = $prev_line tc.tmp
+execute if score $chunk_loaded tc.tmp matches 0 if score use_fuel tc.options matches 1 if score $command tc.tmp matches 1..10 run scoreboard players add @s tc.fuel 1
+execute if score $chunk_loaded tc.tmp matches 0 run scoreboard players reset @s tc.msg
+
+
 # If something went wrong, pause and revert to previous line (next action turtle will try this again)
 execute if score $error_pause tc.tmp matches 1 if score @s tc.msg matches 1.. run function tc:code/pause
 execute if score $error_pause tc.tmp matches 1 unless score $command tc.tmp matches 97 if score @s tc.msg matches 1.. run scoreboard players operation @s tc.line = $prev_line tc.tmp
@@ -202,3 +216,5 @@ scoreboard players reset $prev_line tc.tmp
 scoreboard players reset $line_arg tc.tmp
 scoreboard players reset $if_success tc.tmp
 scoreboard players reset $current_line tc.tmp
+
+scoreboard players reset $chunk_loaded tc.tmp

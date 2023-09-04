@@ -26,5 +26,5 @@ clear @a #tc:clear{tc:"clear_item"}
 
 
 # Execute turtle code
-function tc:code/run/tick
+execute unless score paused tc.options matches 1 run function tc:code/run/tick
 

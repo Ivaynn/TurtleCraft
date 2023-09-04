@@ -9,9 +9,7 @@ advancement revoke @a only tc:craft_egg_deep
 
 
 # Do this for every dimension - Blocks at [10028 0 10028] and [10028 1 10028] will be replaced with bedrock
-execute in minecraft:overworld run forceload add 10028 10028
-execute in minecraft:the_nether run forceload add 10028 10028
-execute in minecraft:the_end run forceload add 10028 10028
+function tc:forceload
 
 
 # Scores
@@ -69,3 +67,4 @@ execute unless score limit_directions tc.options matches 0..1 run scoreboard pla
 execute unless score limit_counter_display tc.options matches 0..1 run scoreboard players set limit_counter_display tc.options 1
 execute unless score launch_strength tc.options matches 0.. run scoreboard players set launch_strength tc.options 150
 execute unless score auto_refresh tc.options matches 0..1 run scoreboard players set auto_refresh tc.options 0
+execute unless score paused tc.options matches 0..1 run scoreboard players set paused tc.options 0
