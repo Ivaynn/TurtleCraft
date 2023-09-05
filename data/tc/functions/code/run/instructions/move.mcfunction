@@ -1,6 +1,7 @@
 # Executed by tc.body at goal coordinates. All turtle entities have "tc.tmp"
 
 execute if score $chunk_loaded tc.tmp matches 1 unless loaded ~ ~ ~ run scoreboard players set $chunk_loaded tc.tmp 0
+execute if score $chunk_loaded tc.tmp matches 0 run return 0
 
 # Automine for "forward", "up" and "down"
 execute if score $auto_mine tc.tmp matches 1 if data storage tc:tmp {run_line:{A:{direction:"forward"}}} at @s anchored eyes positioned ^ ^ ^1 unless block ~ ~ ~ #tc:no_hitbox run function tc:code/run/instructions/mine/init

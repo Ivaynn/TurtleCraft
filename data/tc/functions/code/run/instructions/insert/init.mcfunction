@@ -1,6 +1,7 @@
 # Executed by tc.body at block coordinates. All turtle entities have "tc.tmp"
 
 execute if score $chunk_loaded tc.tmp matches 1 unless loaded ~ ~ ~ run scoreboard players set $chunk_loaded tc.tmp 0
+execute if score $chunk_loaded tc.tmp matches 0 run return 0
 
 data modify storage tc:tmp llama_items set from entity @s Items
 execute store result score $llama_slots tc.tmp run data get storage tc:tmp llama_items

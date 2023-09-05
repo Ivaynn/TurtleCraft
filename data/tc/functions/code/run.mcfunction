@@ -4,6 +4,7 @@
 # Check forceloaded chunks
 execute unless loaded 10028 ~ 10028 run function tc:forceload
 execute unless loaded 10028 ~ 10028 run return 0
+execute unless loaded ~ ~ ~ run return 0
 
 
 # Dismount player riding

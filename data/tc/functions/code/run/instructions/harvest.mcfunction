@@ -1,6 +1,7 @@
 # Executed by tc.body at mined block coordinates. All turtle entities have "tc.tmp"
 
 execute if score $chunk_loaded tc.tmp matches 1 unless loaded ~ ~ ~ run scoreboard players set $chunk_loaded tc.tmp 0
+execute if score $chunk_loaded tc.tmp matches 0 run return 0
 
 # Get crop type
 execute if block ~ ~ ~ minecraft:wheat[age=7] run scoreboard players set $crop_type tc.tmp 1
