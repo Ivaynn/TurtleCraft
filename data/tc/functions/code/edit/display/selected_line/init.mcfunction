@@ -18,10 +18,10 @@ execute if score $command tc.tmp matches 10 run function tc:code/edit/display/se
 execute if score $command tc.tmp matches 5..7 run function tc:code/edit/display/selected_line/yellow_group
 
 # Grab/drop <item>
-execute if score $command tc.tmp matches 8..9 run tellraw @s ["",{"score":{"name":"$page_selected","objective":"tc.tmp"},"color":"green"},{"score":{"name":"$index_selected","objective":"tc.tmp"},"color":"green"},{"text":" | ","color":"dark_green"}," ",{"nbt":"selected_display.C","storage":"tc:tmp","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -600"},"hoverEvent":{"action":"show_text","contents":[{"text":"Remove line","color":"red"}]}},"  ",{"nbt":"selected_display.J1","storage":"tc:tmp","interpret":true,"color":"aqua","clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -401"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to insert your selected item","color":"gray"}]}}]
+execute if score $command tc.tmp matches 8..9 run tellraw @s ["",{"score":{"name":"$page_selected","objective":"tc.tmp"},"color":"green"},{"score":{"name":"$index_selected","objective":"tc.tmp"},"color":"green"},{"text":" | ","color":"dark_green"}," ",{"nbt":"selected_display.C","storage":"tc:tmp","interpret":true},"  ",{"nbt":"selected_display.J1","storage":"tc:tmp","interpret":true,"color":"aqua","clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -401"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to insert your selected item","color":"gray"}]}}]
 
 # Empty line
-execute if score $command tc.tmp matches 90 run tellraw @s ["",{"score":{"name":"$page_selected","objective":"tc.tmp"},"color":"green"},{"score":{"name":"$index_selected","objective":"tc.tmp"},"color":"green"},{"text":" | ","color":"dark_green"},"  ",{"text":"empty","color":"#E6E6E6","italic": true,"clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -600"},"hoverEvent":{"action":"show_text","contents":[{"text":"Remove line","color":"red"}]}}]
+execute if score $command tc.tmp matches 90 run tellraw @s ["",{"score":{"name":"$page_selected","objective":"tc.tmp"},"color":"green"},{"score":{"name":"$index_selected","objective":"tc.tmp"},"color":"green"},{"text":" | ","color":"dark_green"},"  ",{"text":"empty","color":"#E6E6E6","italic": true}]
 
 # Counter <name> <operation> value/counter/pos <value>
 execute if score $command tc.tmp matches 91 run function tc:code/edit/display/selected_line/counter
@@ -36,7 +36,7 @@ execute if score $command tc.tmp matches 94 run function tc:code/edit/display/se
 execute if score $command tc.tmp matches 95 run function tc:code/edit/display/selected_line/line
 
 # wait, pause, stop, remove
-execute if score $command tc.tmp matches 96..99 run tellraw @s ["",{"score":{"name":"$page_selected","objective":"tc.tmp"},"color":"green"},{"score":{"name":"$index_selected","objective":"tc.tmp"},"color":"green"},{"text":" | ","color":"dark_green"}," ",{"nbt":"selected_display.C","storage":"tc:tmp","interpret":true,"clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -600"},"hoverEvent":{"action":"show_text","contents":[{"text":"Remove line","color":"red"}]}}]
+execute if score $command tc.tmp matches 96..99 run tellraw @s ["",{"score":{"name":"$page_selected","objective":"tc.tmp"},"color":"green"},{"score":{"name":"$index_selected","objective":"tc.tmp"},"color":"green"},{"text":" | ","color":"dark_green"}," ",{"nbt":"selected_display.C","storage":"tc:tmp","interpret":true}]
 
 # Clear tmp
 scoreboard players reset $command tc.tmp

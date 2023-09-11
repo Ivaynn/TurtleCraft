@@ -35,6 +35,9 @@ execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 8
 execute if score $operation tc.tmp matches 3 run scoreboard players set $display_page tc.tmp 2
 execute if score $operation tc.tmp matches 3 if score $argument tc.tmp matches 0..13 run function tc:code/edit/select_line
 
+# Edit line
+execute if score $operation tc.tmp matches 3 if score $argument tc.tmp matches 14..20 run function tc:code/edit/edit_line
+
 # Show options to edit selected argument
 execute if score $operation tc.tmp matches 4 run scoreboard players set $display_page tc.tmp 2
 execute if score $operation tc.tmp matches 4 run scoreboard players set $pause tc.tmp 1
@@ -44,11 +47,6 @@ execute if score $operation tc.tmp matches 4 if score $argument tc.tmp matches 1
 execute if score $operation tc.tmp matches 5 run scoreboard players set $display_page tc.tmp 2
 execute if score $operation tc.tmp matches 5 if score $argument tc.tmp matches 1.. run scoreboard players set $pause tc.tmp 1
 execute if score $operation tc.tmp matches 5 if score $argument tc.tmp matches 1.. run function tc:code/edit/add
-
-# Remove line
-execute if score $operation tc.tmp matches 6 if score $argument tc.tmp matches 0 run scoreboard players set $pause tc.tmp 1
-execute if score $operation tc.tmp matches 6 if score $argument tc.tmp matches 0 run scoreboard players set $display_page tc.tmp 2
-execute if score $operation tc.tmp matches 6 if score $argument tc.tmp matches 0 run function tc:code/edit/remove
 
 # Change option
 execute if score $operation tc.tmp matches 6 if score $argument tc.tmp matches 1.. as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run function tc:code/edit/change_option
