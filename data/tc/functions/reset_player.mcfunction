@@ -6,4 +6,3 @@ scoreboard players reset @s tc.page
 
 advancement revoke @s only tc:root
 advancement revoke @s only tc:craft_egg
-advancement revoke @s only tc:craft_egg_deep

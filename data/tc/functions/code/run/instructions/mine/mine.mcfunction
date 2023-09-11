@@ -31,7 +31,7 @@ execute if score $success tc.tmp matches 1 run function tc:code/run/instructions
 execute if score $success tc.tmp matches 0 run scoreboard players set @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] tc.msg 1
 #    If PauseOnError: don't break
 #    Else: break block and drop items on the ground
-execute if score $success tc.tmp matches 0 if score $error_pause tc.tmp matches 0 run loot spawn ~ ~ ~ mine ~ ~ ~ mainhand
+execute if score $success tc.tmp matches 0 if score $error_pause tc.tmp matches 0 align xyz positioned ~0.5 ~0.5 ~0.5 run loot spawn ~ ~ ~ mine ~ ~ ~ mainhand
 execute if score $success tc.tmp matches 0 if score $error_pause tc.tmp matches 0 run function tc:code/run/instructions/mine/break_block
 
 

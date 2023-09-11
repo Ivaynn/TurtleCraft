@@ -1,6 +1,5 @@
 # Triggered by an advancement
 advancement revoke @s only tc:craft_egg
-advancement revoke @s only tc:craft_egg_deep
 
 
 # This function gets executed once for every item crafted
