@@ -17,8 +17,8 @@ execute as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] unless data e
 # Choose action from player items/sneak
 scoreboard players set $action tc.tmp 0
 execute if predicate tc:sneak if predicate tc:holding_equipment run scoreboard players set $action tc.tmp 1
-execute if predicate tc:sneak if predicate tc:holding_disc unless predicate tc:holding_disc_turtle run scoreboard players set $action tc.tmp 2
-execute if predicate tc:sneak if predicate tc:holding_disc_turtle run scoreboard players set $action tc.tmp 3
+# execute if predicate tc:sneak if predicate tc:holding_disc unless predicate tc:holding_disc_turtle run scoreboard players set $action tc.tmp 2
+# execute if predicate tc:sneak if predicate tc:holding_disc_turtle run scoreboard players set $action tc.tmp 3
 execute if predicate tc:sneak if predicate tc:holding_cosmetic run scoreboard players set $action tc.tmp 4
 execute if predicate tc:sneak if predicate tc:holding_fuel run scoreboard players set $action tc.tmp 5
 execute if predicate tc:sneak if predicate tc:holding_lever run scoreboard players set $action tc.tmp 6
@@ -33,8 +33,8 @@ execute if score $action tc.tmp matches 0 run advancement grant @s only tc:open_
 
 execute if score $action tc.tmp matches 0 run function tc:code/edit/display/init
 execute if score $action tc.tmp matches 1 if score use_tools tc.options matches 1 run function tc:entity/interact/switch_item
-execute if score $action tc.tmp matches 2 if score use_discs tc.options matches 1 run function tc:entity/interact/disc/save
-execute if score $action tc.tmp matches 3 if score use_discs tc.options matches 1 run function tc:entity/interact/disc/load
+# execute if score $action tc.tmp matches 2 if score use_discs tc.options matches 1 run function tc:entity/interact/disc/save
+# execute if score $action tc.tmp matches 3 if score use_discs tc.options matches 1 run function tc:entity/interact/disc/load
 execute if score $action tc.tmp matches 4 if score change_appearance tc.options matches 1 run function tc:entity/interact/change_cosmetic
 execute if score $action tc.tmp matches 5 if score use_fuel tc.options matches 1 run function tc:entity/interact/use_fuel
 

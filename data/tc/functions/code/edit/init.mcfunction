@@ -38,6 +38,9 @@ execute if score $operation tc.tmp matches 3 if score $argument tc.tmp matches 0
 # Edit line
 execute if score $operation tc.tmp matches 3 if score $argument tc.tmp matches 14..20 run function tc:code/edit/edit_line
 
+# Turtle Disc
+execute if score $operation tc.tmp matches 3 if score $argument tc.tmp matches 97..99 run function tc:code/edit/use_disc
+
 # Show options to edit selected argument
 execute if score $operation tc.tmp matches 4 run scoreboard players set $display_page tc.tmp 2
 execute if score $operation tc.tmp matches 4 run scoreboard players set $pause tc.tmp 1

@@ -2,8 +2,6 @@
 
 advancement grant @s only tc:save_to_disc
 
-tellraw @s ["",{"text":"\n> ","bold":true,"color":"dark_aqua"},{"text":"Saved Instructions and Options to Disc!\n","color":"gray"}]
-
 
 # Save item to storage and modify it there for performance - add instructions
 data modify storage tc:tmp item set from entity @s SelectedItem
