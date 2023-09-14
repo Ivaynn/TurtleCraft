@@ -24,12 +24,14 @@ execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 1
 execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 2 as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run function tc:code/stop
 execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 3 as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run function tc:code/pause
 execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 4 as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run scoreboard players set @s tc.timer 0
+execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 9 as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run function tc:code/step
 
 # Change pages
 execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 5 run scoreboard players set $display_page tc.tmp 0
 execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 6 run scoreboard players set $display_page tc.tmp 4
 execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 7 run scoreboard players set $display_page tc.tmp 5
 execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 8 run scoreboard players set $display_page tc.tmp 6
+execute if score $operation tc.tmp matches 2 if score $argument tc.tmp matches 9 run scoreboard players set $display_page tc.tmp 1
 
 # Select page / Line
 execute if score $operation tc.tmp matches 3 run scoreboard players set $display_page tc.tmp 2
