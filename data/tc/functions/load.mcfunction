@@ -22,6 +22,7 @@ scoreboard objectives add tc.tmp dummy
 scoreboard objectives add tc.relog minecraft.custom:minecraft.leave_game
 scoreboard objectives add tc.msg dummy
 scoreboard objectives add tc.page dummy
+scoreboard objectives add tc.numpad dummy
 execute unless score $invalid_count tc.id matches 0.. run scoreboard players set $invalid_count tc.id 0
 
 
