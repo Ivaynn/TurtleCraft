@@ -39,7 +39,7 @@ execute if score $action tc.tmp matches 4 if score change_appearance tc.options 
 execute if score $action tc.tmp matches 5 if score use_fuel tc.options matches 1 run function tc:entity/interact/use_fuel
 
 execute if score $action tc.tmp matches 1 if score use_tools tc.options matches 0 run tellraw @s ["",{"text":"\n> ","bold":true,"color":"red"},{"text":"This feature has been disabled on this server!\n","color":"gray"}]
-execute if score $action tc.tmp matches 2..3 if score use_discs tc.options matches 0 run tellraw @s ["",{"text":"\n> ","bold":true,"color":"red"},{"text":"This feature has been disabled on this server!\n","color":"gray"}]
+# execute if score $action tc.tmp matches 2..3 if score use_discs tc.options matches 0 run tellraw @s ["",{"text":"\n> ","bold":true,"color":"red"},{"text":"This feature has been disabled on this server!\n","color":"gray"}]
 execute if score $action tc.tmp matches 4 if score change_appearance tc.options matches 0 run tellraw @s ["",{"text":"\n> ","bold":true,"color":"red"},{"text":"This feature has been disabled on this server!\n","color":"gray"}]
 execute if score $action tc.tmp matches 5 if score use_fuel tc.options matches 0 run tellraw @s ["",{"text":"\n> ","bold":true,"color":"red"},{"text":"This feature has been disabled on this server!\n","color":"gray"}]
 

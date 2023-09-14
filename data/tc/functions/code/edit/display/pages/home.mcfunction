@@ -39,8 +39,9 @@ execute if score $status tc.tmp matches 2 run tellraw @s ["         ",{"text":" 
 
 
 # Music disc
-execute if predicate tc:holding_disc run function tc:code/edit/display/pages/home_disc
+execute if predicate tc:holding_disc if score use_discs tc.options matches 1 run function tc:code/edit/display/pages/home_disc
 execute unless predicate tc:holding_disc run tellraw @s ""
+execute unless score use_discs tc.options matches 1 run tellraw @s ""
 
 
 # Tabs
