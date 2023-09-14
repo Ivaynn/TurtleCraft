@@ -15,10 +15,11 @@ execute if score @s tc.line matches 1.. if score @s tc.line = $line_count tc.tmp
 execute if score @s tc.line < $line_count tc.tmp run function tc:code/edit/remove_selected
 
 
-# Make sure the player's selected line is valid for this turtle. If it's invalid -> select last line
+# Make sure the player's selected line is valid for this turtle. If it's invalid -> select first line
 execute if score $line_count tc.tmp matches 1.. run scoreboard players remove $line_count tc.tmp 1
-execute unless score @s tc.line matches 0.. run scoreboard players operation @s tc.line = $line_count tc.tmp
-execute if score @s tc.line > $line_count tc.tmp run scoreboard players operation @s tc.line = $line_count tc.tmp
+execute if score @s tc.line matches 2.. run scoreboard players remove @s tc.line 1
+execute unless score @s tc.line matches 0.. run scoreboard players set @s tc.line 1
+execute if score @s tc.line > $line_count tc.tmp run scoreboard players set @s tc.line 1
 
 
 # Save instructions to entity
