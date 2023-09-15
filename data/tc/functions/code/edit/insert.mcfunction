@@ -24,11 +24,6 @@ execute store result score $append_count tc.tmp run data get storage tc:tmp list
 function tc:code/edit/common/append_list
 
 
-# Update "line set" instructions
-scoreboard players set $line_set_diff tc.tmp 1
-function tc:code/edit/update_line_set/init
-
-
 # Clear tmp
 scoreboard players reset $index tc.tmp
 scoreboard players reset $last_index tc.tmp
