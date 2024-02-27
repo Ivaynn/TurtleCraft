@@ -19,3 +19,4 @@ execute unless score $entity_count tc.tmp matches 5.. as @e[type=#tc:turtle_part
 
 # Clear tmp
 scoreboard players reset $entity_count tc.tmp
+return 1

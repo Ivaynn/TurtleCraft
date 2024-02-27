@@ -10,3 +10,4 @@ execute if score show_warnings tc.options matches 1 if score $cancel tc.tmp matc
 
 # Clear tmp
 scoreboard players reset $cancel tc.tmp
+return 1

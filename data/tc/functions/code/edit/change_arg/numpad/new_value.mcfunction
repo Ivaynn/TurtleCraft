@@ -26,3 +26,4 @@ execute if score $argument tc.tmp matches 88 run scoreboard players operation $n
 
 # Restore original signal
 execute if score $negative tc.tmp matches 1 run scoreboard players operation $new_value tc.tmp *= #_1 tc.math
+return 1
