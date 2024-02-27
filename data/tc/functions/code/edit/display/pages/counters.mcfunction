@@ -30,7 +30,7 @@ data remove storage tc:tmp Counters
 scoreboard players reset $counter_index tc.tmp
 scoreboard players reset $display_more tc.tmp
 
-data modify entity @e[limit=1,type=minecraft:text_display,tag=tc.tmp,tag=tc.text] text set value ""
+data modify entity @e[limit=1,type=minecraft:text_display,tag=tc.tmp,tag=tc.text] text set value '{"text":""}'
 scoreboard players reset $convert_str tc.tmp
 data remove storage tc:tmp json_arg
 

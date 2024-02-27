@@ -186,6 +186,7 @@ execute if score $error_pause tc.tmp matches 1 if score @s tc.msg matches 1.. if
 
 # Stop conditions
 execute unless score @s tc.msg matches 1.. if score @s tc.timer matches 0.. if score @s tc.line > $line_count tc.tmp run scoreboard players set @s tc.msg 9
+execute unless score @s tc.msg matches 1.. if score @s tc.timer matches 0.. unless score @s tc.line matches 1.. run scoreboard players set @s tc.msg 8
 execute if score @s tc.timer matches 0.. if score @s tc.line > $line_count tc.tmp run function tc:code/stop
 
 

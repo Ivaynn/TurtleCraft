@@ -22,6 +22,6 @@ execute unless data storage tc:tmp {new_display:{A5:""}} run function tc:code/ed
 
 
 # Clear tmp
-data modify entity @s text set value ""
+data modify entity @s text set value '{"text":""}'
 scoreboard players reset $convert_str tc.tmp
 data remove storage tc:tmp json_arg

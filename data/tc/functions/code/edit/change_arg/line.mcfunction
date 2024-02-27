@@ -12,7 +12,7 @@ execute if score $argument tc.tmp matches 2 run scoreboard players remove $new_l
 execute if score $argument tc.tmp matches 3 run scoreboard players remove $new_line tc.tmp 1
 execute if score $argument tc.tmp matches 4 run scoreboard players add $new_line tc.tmp 1
 execute if score $argument tc.tmp matches 5 run scoreboard players add $new_line tc.tmp 10
-execute if score $argument tc.tmp matches 2..5 unless score $new_line tc.tmp matches 1.. run scoreboard players set $new_line tc.tmp 1
+execute if score $argument tc.tmp matches 2..5 unless score $new_line tc.tmp matches 0.. run scoreboard players set $new_line tc.tmp 0
 execute if score $argument tc.tmp matches 2..5 store result storage tc:tmp list_start[-1].A.line int 1 run scoreboard players get $new_line tc.tmp
 
 

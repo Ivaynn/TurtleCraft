@@ -2,7 +2,7 @@
 
 execute if score $text_id tc.tmp matches 1.. if score $error_pause tc.tmp matches 1 run function tc:code/pause
 
-execute if score $text_id tc.tmp matches 0 run data modify entity @s text set value ""
+execute if score $text_id tc.tmp matches 0 run data modify entity @s text set value '{"text":""}'
 
 execute if score $text_id tc.tmp matches 0 run data modify entity @s view_range set value 0f
 execute if score $text_id tc.tmp matches 1.. run data modify entity @s view_range set value 1f

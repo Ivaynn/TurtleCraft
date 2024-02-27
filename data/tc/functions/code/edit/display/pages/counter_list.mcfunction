@@ -10,7 +10,7 @@ execute if score $convert_str tc.tmp matches 1 run data modify storage tc:tmp Co
 
 
 # Print line
-tellraw @s [" ",{"nbt":"Counters[-1].name","interpret":true,"storage":"tc:tmp","color":"gray"},{"text":":  ","color":"gray"},{"nbt":"Counters[-1].value","storage":"tc:tmp","color":"gray"}]
+tellraw @s [" ",{"nbt":"Counters[-1].name","interpret":true,"storage":"tc:tmp","color":"gray","hoverEvent":{"action":"show_text","contents":[{"nbt":"Counters[-1].name","interpret":false,"storage":"tc:tmp","color":"gray"}]}},{"text":":  ","color":"gray"},{"nbt":"Counters[-1].value","storage":"tc:tmp","color":"gray"}]
 
 
 # Iterate

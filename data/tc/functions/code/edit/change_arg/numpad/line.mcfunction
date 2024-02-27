@@ -13,7 +13,7 @@ scoreboard players reset $negative tc.tmp
 
 
 # Check bounds
-execute unless score $new_value tc.tmp matches 1.. run scoreboard players set $new_value tc.tmp 1
+execute unless score $new_value tc.tmp matches 0.. run scoreboard players operation $new_value tc.tmp *= #_1 tc.math
 
 
 # Save changes
