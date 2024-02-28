@@ -1,22 +1,6 @@
 
 # Generate a random number between 0 and 65535 (2^16)
-scoreboard players set $counter_operator tc.tmp 0
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 1
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 2
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 4
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 8
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 16
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 32
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 64
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 128
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 256
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 512
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 1024
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 2048
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 4096
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 8192
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 16384
-execute if predicate tc:random_50 run scoreboard players add $counter_operator tc.tmp 32768
+execute store result score $counter_operator tc.tmp run random value 0..65535
 
 
 # Get range from instruction line (must be between 1 and 128)

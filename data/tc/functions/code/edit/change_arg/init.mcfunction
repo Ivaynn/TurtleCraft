@@ -64,3 +64,4 @@ data remove storage tc:tmp list_start
 data remove storage tc:tmp list_end
 data remove storage tc:tmp Instructions
 data remove storage tc:tmp edit_arg
+data remove storage tc:tmp book
