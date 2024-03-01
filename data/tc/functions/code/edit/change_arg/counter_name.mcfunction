@@ -21,9 +21,9 @@ execute if score $name_src tc.tmp matches 4 run function tc:code/edit/change_arg
 execute if score $name_src tc.tmp matches 4 run data modify storage tc:tmp counter_name.name set from storage tc:tmp book.return
 
 
-# Fix 1.20.3 changes to strings: if name is just quoted and not json, remove the extra quotes (first and last characters of the string)
+# If name is not json, use book validation
 execute if score $name_src tc.tmp matches 3 run data modify storage tc:tmp counter_name.test set string storage tc:tmp counter_name.name 0 1
-execute if score $name_src tc.tmp matches 3 if data storage tc:tmp {counter_name:{test:'"'}} run data modify storage tc:tmp counter_name.name set string storage tc:tmp counter_name.name 1 -1
+execute if score $name_src tc.tmp matches 3 if data storage tc:tmp {counter_name:{test:'"'}} run function tc:code/edit/change_arg/counter_name_validate
 
 
 # Clear tmp
