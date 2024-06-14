@@ -8,7 +8,7 @@ tp @s ~ ~10 ~
 
 # Load data from egg storage
 data modify entity @s CustomName set from storage tc:tmp new_turtle.Name
-data modify entity @s ArmorItems[0].tag.Instructions set from storage tc:tmp new_turtle.Instructions
+data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions set from storage tc:tmp new_turtle.Instructions
 execute store result score @s tc.fuel run data get storage tc:tmp new_turtle.Fuel
 
 

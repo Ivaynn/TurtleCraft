@@ -17,7 +17,7 @@ execute at @s as @a[distance=..10,tag=!tc.player] if score @s tc.id = @e[limit=1
 
 # Check if turtle is locked and has an owner (if it's not busy)
 scoreboard players set $turtle_lock tc.tmp 0
-execute if score $turtle_busy tc.tmp matches 0 if score locked_turtles tc.options matches 1 store result score $turtle_lock tc.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].tag.Instructions[0].Locked 1
+execute if score $turtle_busy tc.tmp matches 0 if score locked_turtles tc.options matches 1 store result score $turtle_lock tc.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].Locked 1
 execute if score $turtle_busy tc.tmp matches 0 if score locked_turtles tc.options matches 1 unless data entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].tag.Owner run scoreboard players set $turtle_lock tc.tmp 0
 
 

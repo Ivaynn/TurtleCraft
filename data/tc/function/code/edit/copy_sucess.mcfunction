@@ -12,7 +12,7 @@ data modify storage tc:tmp Clipboard set from storage tc:tmp list_start[-1]
 
 
 # Save to clipboard
-data modify entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].tag.Clipboard set from storage tc:tmp Clipboard
+data modify entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].components."minecraft:custom_data".tc.Clipboard set from storage tc:tmp Clipboard
 
 
 # Clear tmp

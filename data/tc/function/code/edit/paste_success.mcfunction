@@ -25,7 +25,7 @@ execute if score $line_count tc.tmp < max_length tc.options run scoreboard playe
 
 
 # Save instructions to entity
-execute if score $line_count tc.tmp < max_length tc.options run data modify entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].tag.Instructions set from storage tc:tmp Instructions
+execute if score $line_count tc.tmp < max_length tc.options run data modify entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].components."minecraft:custom_data".tc.Instructions set from storage tc:tmp Instructions
 
 
 # Clear tmp

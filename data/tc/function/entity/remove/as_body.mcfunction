@@ -18,7 +18,7 @@ setblock 10028 1 10028 minecraft:bedrock
 setblock 10028 1 10028 minecraft:yellow_shulker_box
 loot insert 10028 1 10028 loot tc:egg
 data modify block 10028 1 10028 Items[0].tag.display.Name set from entity @s CustomName
-data modify block 10028 1 10028 Items[0].tag.EntityTag.data.Instructions set from entity @s ArmorItems[0].tag.Instructions
+data modify block 10028 1 10028 Items[0].tag.EntityTag.data.Instructions set from entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions
 execute store result block 10028 1 10028 Items[0].tag.EntityTag.data.Fuel int 1 run scoreboard players get @s tc.fuel
 loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 

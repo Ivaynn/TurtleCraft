@@ -2,7 +2,7 @@
 
 
 # Get data
-data modify storage tc:tmp Instructions set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].tag.Instructions
+data modify storage tc:tmp Instructions set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].components."minecraft:custom_data".tc.Instructions
 execute store result score $last_index tc.tmp run data get storage tc:tmp Instructions
 scoreboard players remove $last_index tc.tmp 1
 

@@ -2,7 +2,7 @@
 
 
 ## Get options
-data modify storage tc:tmp Options set from entity @s ArmorItems[0].tag.Instructions[0]
+data modify storage tc:tmp Options set from entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0]
 execute store result score $auto_mine tc.tmp run data get storage tc:tmp Options.AutoMine 1
 execute store result score $error_pause tc.tmp run data get storage tc:tmp Options.PauseOnError 1
 execute store result score $turtle_lock tc.tmp run data get storage tc:tmp Options.Locked 1
@@ -15,39 +15,39 @@ execute store result score $damage_players tc.tmp run data get storage tc:tmp Op
 
 ## Update option
 # AutoMine
-execute if score $argument tc.tmp matches 1 if score $auto_mine tc.tmp matches 1 run data modify entity @s ArmorItems[0].tag.Instructions[0].AutoMine set value 0b
-execute if score $argument tc.tmp matches 1 if score $auto_mine tc.tmp matches 0 run data modify entity @s ArmorItems[0].tag.Instructions[0].AutoMine set value 1b
+execute if score $argument tc.tmp matches 1 if score $auto_mine tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].AutoMine set value 0b
+execute if score $argument tc.tmp matches 1 if score $auto_mine tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].AutoMine set value 1b
 
 # PauseOnError
-execute if score $argument tc.tmp matches 2 if score $error_pause tc.tmp matches 1 run data modify entity @s ArmorItems[0].tag.Instructions[0].PauseOnError set value 0b
-execute if score $argument tc.tmp matches 2 if score $error_pause tc.tmp matches 0 run data modify entity @s ArmorItems[0].tag.Instructions[0].PauseOnError set value 1b
+execute if score $argument tc.tmp matches 2 if score $error_pause tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].PauseOnError set value 0b
+execute if score $argument tc.tmp matches 2 if score $error_pause tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].PauseOnError set value 1b
 
 # Locked
-execute if score $argument tc.tmp matches 3 if score $turtle_lock tc.tmp matches 1 run data modify entity @s ArmorItems[0].tag.Instructions[0].Locked set value 0b
-execute if score $argument tc.tmp matches 3 if score $turtle_lock tc.tmp matches 0 run data modify entity @s ArmorItems[0].tag.Instructions[0].Locked set value 1b
+execute if score $argument tc.tmp matches 3 if score $turtle_lock tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].Locked set value 0b
+execute if score $argument tc.tmp matches 3 if score $turtle_lock tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].Locked set value 1b
 
 # AutoFuel
-execute if score $argument tc.tmp matches 4 if score $auto_fuel tc.tmp matches 1 run data modify entity @s ArmorItems[0].tag.Instructions[0].AutoFuel set value 0b
-execute if score $argument tc.tmp matches 4 if score $auto_fuel tc.tmp matches 0 run data modify entity @s ArmorItems[0].tag.Instructions[0].AutoFuel set value 1b
+execute if score $argument tc.tmp matches 4 if score $auto_fuel tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].AutoFuel set value 0b
+execute if score $argument tc.tmp matches 4 if score $auto_fuel tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].AutoFuel set value 1b
 
 # SafeMine
-execute if score $argument tc.tmp matches 5 if score $safe_mine tc.tmp matches 1 run data modify entity @s ArmorItems[0].tag.Instructions[0].SafeMine set value 0b
-execute if score $argument tc.tmp matches 5 if score $safe_mine tc.tmp matches 0 run data modify entity @s ArmorItems[0].tag.Instructions[0].SafeMine set value 1b
+execute if score $argument tc.tmp matches 5 if score $safe_mine tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].SafeMine set value 0b
+execute if score $argument tc.tmp matches 5 if score $safe_mine tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].SafeMine set value 1b
 
 # ShowText
-execute if score $argument tc.tmp matches 6 if score $show_text tc.tmp matches 1 run data modify entity @s ArmorItems[0].tag.Instructions[0].ShowText set value 0b
-execute if score $argument tc.tmp matches 6 if score $show_text tc.tmp matches 0 run data modify entity @s ArmorItems[0].tag.Instructions[0].ShowText set value 1b
+execute if score $argument tc.tmp matches 6 if score $show_text tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].ShowText set value 0b
+execute if score $argument tc.tmp matches 6 if score $show_text tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].ShowText set value 1b
 
 # DamagePlayers
-execute if score $argument tc.tmp matches 7 if score $damage_players tc.tmp matches 1 run data modify entity @s ArmorItems[0].tag.Instructions[0].DamagePlayers set value 0b
-execute if score $argument tc.tmp matches 7 if score $damage_players tc.tmp matches 0 run data modify entity @s ArmorItems[0].tag.Instructions[0].DamagePlayers set value 1b
+execute if score $argument tc.tmp matches 7 if score $damage_players tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].DamagePlayers set value 0b
+execute if score $argument tc.tmp matches 7 if score $damage_players tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].DamagePlayers set value 1b
 
 
 ## Other buttons
 
 # Reset
 execute if score $argument tc.tmp matches 99 run function tc:code/stop
-execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[0].tag.Instructions set value [{AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:1b, SafeMine:1b, ShowText:0b, DamagePlayers:0b}]
+execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions set value [{AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:1b, SafeMine:1b, ShowText:0b, DamagePlayers:0b}]
 execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",count:1b,tag:{Counters:[]}}
 
 # Pick up

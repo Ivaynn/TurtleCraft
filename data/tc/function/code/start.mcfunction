@@ -1,6 +1,6 @@
 # Executed by tc.body - all attached entities have "tc.tmp"
 
-execute store result score $lines tc.tmp run data get entity @s ArmorItems[0].tag.Instructions
+execute store result score $lines tc.tmp run data get entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions
 
 execute if score $lines tc.tmp matches 2.. run scoreboard players set @s tc.line 1
 execute if score $lines tc.tmp matches 2.. if score @s tc.fuel matches 1.. if score use_fuel tc.options matches 1 run scoreboard players operation @s tc.timer = delay_fueled tc.options

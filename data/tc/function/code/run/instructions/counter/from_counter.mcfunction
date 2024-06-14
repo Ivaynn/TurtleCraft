@@ -1,6 +1,6 @@
 
 # Get list
-data modify storage tc:tmp counter_src set from entity @s ArmorItems[3].tag.Counters
+data modify storage tc:tmp counter_src set from entity @s ArmorItems[3].components."minecraft:custom_data".tc.Counters
 
 
 # Iterate: for every counter in list, check if its name matches the one in run_line

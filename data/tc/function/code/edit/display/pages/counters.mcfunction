@@ -12,7 +12,7 @@ tellraw @s [{"text":"","clickEvent":{"action":"run_command","value":"/trigger tc
 
 
 # Print counters <name>: <value>
-data modify storage tc:tmp Counters set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[3].tag.Counters
+data modify storage tc:tmp Counters set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[3].components."minecraft:custom_data".tc.Counters
 execute store result score $counter_index tc.tmp run data get storage tc:tmp Counters
 execute if score $counter_index tc.tmp matches 0 run tellraw @s [" ",{"text":"Empty list","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Use the ","color":"gray"},{"text":"counter","color":"#FD93FD"},{"text":" instruction\nto see a list of counters here","color":"gray"}]}}]
 

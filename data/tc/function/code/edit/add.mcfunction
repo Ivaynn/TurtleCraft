@@ -27,7 +27,7 @@ execute if score $argument tc.tmp matches 99 run data modify storage tc:tmp new_
 
 
 # Create temporary storage with the current instructions + get line count
-data modify storage tc:tmp Instructions set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].tag.Instructions
+data modify storage tc:tmp Instructions set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].components."minecraft:custom_data".tc.Instructions
 execute store result score $line_count tc.tmp run data get storage tc:tmp Instructions
 scoreboard players remove $line_count tc.tmp 1
 
@@ -50,7 +50,7 @@ execute if score $line_count tc.tmp < max_length tc.options run scoreboard playe
 
 
 # Save instructions to entity
-execute if score $line_count tc.tmp < max_length tc.options run data modify entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].tag.Instructions set from storage tc:tmp Instructions
+execute if score $line_count tc.tmp < max_length tc.options run data modify entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].components."minecraft:custom_data".tc.Instructions set from storage tc:tmp Instructions
 
 
 # Clear tmp
