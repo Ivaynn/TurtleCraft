@@ -2,7 +2,7 @@
 
 
 # Add item count of this slot to total
-execute store result score $block_this_slot tc.tmp run data get storage tc:tmp block_items[-1].Count
+execute store result score $block_this_slot tc.tmp run data get storage tc:tmp block_items[-1].count
 scoreboard players operation $block_item_count tc.tmp += $block_this_slot tc.tmp
 
 

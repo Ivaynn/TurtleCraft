@@ -23,7 +23,7 @@
         "id": "minecraft:knowledge_book",
         "count": 1,
         "components": {
-            "minecraft:custom_data": "{tc:\"craft_book\"}"
+            "minecraft:custom_data": "{tc:{CraftBook:1b}}"
         }
     }
 }

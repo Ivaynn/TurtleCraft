@@ -41,7 +41,7 @@ data modify block 10028 1 10028 Items set from storage tc:tmp llama_items
 setblock 10028 0 10028 minecraft:yellow_shulker_box
 loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 setblock 10028 1 10028 minecraft:bedrock
-setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:glow_berries",Count:1b}]}
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:glow_berries",count:1b}]}
 loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 

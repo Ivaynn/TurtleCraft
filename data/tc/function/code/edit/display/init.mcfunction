@@ -3,7 +3,7 @@
 
 
 # Create temporary storage + get line count
-data modify storage tc:tmp Instructions set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].tag.Instructions
+data modify storage tc:tmp Instructions set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0]."minecraft:custom_data".tc.Instructions
 execute store result score $line_count tc.tmp run data get storage tc:tmp Instructions
 scoreboard players remove $line_count tc.tmp 1
 

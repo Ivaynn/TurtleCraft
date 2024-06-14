@@ -48,7 +48,7 @@ execute if score $argument tc.tmp matches 7 if score $damage_players tc.tmp matc
 # Reset
 execute if score $argument tc.tmp matches 99 run function tc:code/stop
 execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[0].tag.Instructions set value [{AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:1b, SafeMine:1b, ShowText:0b, DamagePlayers:0b}]
-execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",Count:1b,tag:{Counters:[]}}
+execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",count:1b,tag:{Counters:[]}}
 
 # Pick up
 execute if score $argument tc.tmp matches 98 run function tc:entity/remove/init

@@ -6,9 +6,9 @@ execute if data storage tc:tmp llama_items[-1].tag run function tc:code/run/inst
 
 
 # Reduce count by 1
-execute store result score $item_count tc.tmp run data get storage tc:tmp llama_items[-1].Count
+execute store result score $item_count tc.tmp run data get storage tc:tmp llama_items[-1].count
 scoreboard players remove $item_count tc.tmp 1
-execute store result storage tc:tmp llama_items[-1].Count byte 1 run scoreboard players get $item_count tc.tmp
+execute store result storage tc:tmp llama_items[-1].count byte 1 run scoreboard players get $item_count tc.tmp
 
 
 # Get inventory after item

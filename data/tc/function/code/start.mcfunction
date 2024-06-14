@@ -8,7 +8,7 @@ execute if score $lines tc.tmp matches 2.. if score @s tc.fuel matches 1.. unles
 execute if score $lines tc.tmp matches 2.. unless score @s tc.fuel matches 1.. run scoreboard players operation @s tc.timer = delay_normal tc.options
 execute if score $lines tc.tmp matches 2.. run scoreboard players reset @s tc.msg
 
-data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",Count:1b,tag:{Counters:[]}}
+data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",count:1b,tag:{Counters:[]}}
 
 scoreboard players reset $lines tc.tmp
 

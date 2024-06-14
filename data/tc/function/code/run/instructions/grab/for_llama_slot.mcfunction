@@ -2,7 +2,7 @@
 
 
 # Add item count of this slot to total
-execute store result score $llama_this_slot tc.tmp run data get storage tc:tmp llama_items[-1].Count
+execute store result score $llama_this_slot tc.tmp run data get storage tc:tmp llama_items[-1].count
 scoreboard players operation $llama_item_count tc.tmp += $llama_this_slot tc.tmp
 
 

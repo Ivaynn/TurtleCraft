@@ -5,7 +5,7 @@
     "predicate": {
       "equipment": {
         "mainhand": {
-          "tag": "tc:equipment"
+          "items": "#tc:equipment"
         }
       }
     }

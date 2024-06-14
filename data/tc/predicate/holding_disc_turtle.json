@@ -4,8 +4,10 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "tag": "minecraft:music_discs",
-        "nbt": "{TurtleDisc:1b}"
+        "items": "#tc:music_discs",
+        "predicates": {
+          "custom_data": "{tc:{TurtleDisc:1b}}"
+        }
       }
     }
   }

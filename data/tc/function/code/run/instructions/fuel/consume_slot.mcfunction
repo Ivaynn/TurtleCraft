@@ -3,7 +3,7 @@
 # Get fuel count + item count
 scoreboard players operation $fuel_consumed tc.tmp = $fuel_count tc.tmp
 
-execute store result score $item_count tc.tmp run data get storage tc:tmp llama_items[0].Count
+execute store result score $item_count tc.tmp run data get storage tc:tmp llama_items[0].count
 
 
 scoreboard players operation $item_count tc.tmp -= $fuel_count tc.tmp 

@@ -4,11 +4,11 @@ advancement grant @s only tc:equip
 
 # Store player's selected item
 data modify storage tc:tmp switch_item set from entity @s SelectedItem
-data modify storage tc:tmp switch_item.tag.tc set value "clear_item"
+data modify storage tc:tmp switch_item.components."minecraft:custom_data".tc set value "clear_item"
 
 
 # Give llama's item to player
-execute as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] if predicate tc:holding_equipment run data remove entity @s HandItems[0].tag.tc
+execute as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] if predicate tc:holding_equipment run data remove entity @s HandItems[0].components."minecraft:custom_data".tc
 execute as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] unless predicate tc:holding_equipment run data remove entity @s HandItems[0]
 item replace entity @s weapon.mainhand from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] weapon
 

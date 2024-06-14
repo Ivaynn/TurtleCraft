@@ -13,9 +13,12 @@ execute if data entity @s {SelectedItem:{id:"minecraft:charcoal"}} run scoreboar
 scoreboard players operation $fuel_power tc.tmp *= fuel_multiplier tc.options
 scoreboard players operation $fuel_power tc.tmp /= #100 tc.math
 
+tellraw @a ["",{"score":{"objective": "tc.tmp","name": "$fuel_power"}}]
+
+
 
 # Get count and apply result to turtle. Don't let it overflow (can't go above 2147483647)
-execute store result score $fuel_count tc.tmp run data get entity @s SelectedItem.Count
+execute store result score $fuel_count tc.tmp run data get entity @s SelectedItem.count
 scoreboard players operation $fuel_power tc.tmp *= $fuel_count tc.tmp
 scoreboard players operation $fuel_level tc.tmp = @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] tc.fuel
 scoreboard players operation $fuel_level tc.tmp += $fuel_power tc.tmp

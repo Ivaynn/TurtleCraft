@@ -15,7 +15,7 @@ loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_da
 
 # Insert items from this chest slot into shulker box
 setblock 10028 0 10028 minecraft:bedrock
-setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",count:1b}]}
 data modify block 10028 0 10028 Items[0] set from storage tc:tmp block_items[0]
 loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
@@ -35,8 +35,8 @@ execute if score $llama_item_count tc.tmp > $llama_count_start tc.tmp run scoreb
 
 # Put any extra items into a data storage
 scoreboard players operation $llama_item_count tc.tmp -= $llama_count_start tc.tmp
-execute store result score $block_item_count tc.tmp run data get storage tc:tmp block_items[0].Count
+execute store result score $block_item_count tc.tmp run data get storage tc:tmp block_items[0].count
 scoreboard players operation $block_item_count tc.tmp -= $llama_item_count tc.tmp
 
-execute store result storage tc:tmp block_items[0].Count byte 1 run scoreboard players get $block_item_count tc.tmp
+execute store result storage tc:tmp block_items[0].count byte 1 run scoreboard players get $block_item_count tc.tmp
 data modify storage tc:tmp extra_items append from storage tc:tmp block_items[0]

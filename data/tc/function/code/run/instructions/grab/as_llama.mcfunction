@@ -15,7 +15,7 @@ loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_da
 
 # Insert item into shulker box
 setblock 10028 0 10028 minecraft:bedrock
-setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",count:1b}]}
 data modify block 10028 0 10028 Items[0] set from storage tc:tmp dropped_item
 loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
@@ -30,5 +30,5 @@ function tc:code/run/instructions/grab/count_llama_items
 
 # Leave any extra items in entity form
 scoreboard players operation $llama_item_count tc.tmp -= $llama_count_start tc.tmp
-execute store result score $dropped_item_count tc.tmp run data get storage tc:tmp dropped_item.Count
+execute store result score $dropped_item_count tc.tmp run data get storage tc:tmp dropped_item.count
 scoreboard players operation $dropped_item_count tc.tmp -= $llama_item_count tc.tmp

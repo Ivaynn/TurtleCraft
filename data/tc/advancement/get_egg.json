@@ -34,7 +34,7 @@
             "items": [
               "minecraft:silverfish_spawn_egg"
             ],
-            "nbt": "{tc:\"egg\"}"
+            "nbt": "{tc:{Egg:1b}}"
           }
         ]
       }
