@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:carved_pumpkin"
+      "id": "minecraft:carved_pumpkin"
     },
     "title": {
       "text": "A New Look"
@@ -10,7 +10,7 @@
       "text": "Change a turtle's block"
     },
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": false
   },

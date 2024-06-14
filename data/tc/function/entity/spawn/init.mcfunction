@@ -1,4 +1,4 @@
-
+say a
 # Store marker data + remove marker
 data modify storage tc:tmp new_turtle set from entity @s data
 data modify storage tc:tmp new_turtle.Name set from entity @s CustomName

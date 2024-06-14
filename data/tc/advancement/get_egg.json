@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:silverfish_spawn_egg",
-      "nbt": "{Enchantments:[{}]}"
+      "id": "minecraft:silverfish_spawn_egg",
+      "components": {
+        "minecraft:enchantment_glint_override": true
+      }
     },
     "title": {
       "text": "A different turtle"
@@ -11,7 +13,7 @@
       "text": "Get a turtle egg"
     },
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": false
   },

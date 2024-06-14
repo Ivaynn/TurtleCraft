@@ -1,38 +1,23 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:observer"
+      "id": "minecraft:observer"
     },
     "title": {
-      "text": "Turtles"
+      "text": "TurtleCraft"
     },
     "description": {
       "text": "Data pack by Ivaynn"
     },
     "background": "minecraft:textures/block/gray_concrete.png",
-    "frame": "goal",
-    "show_toast": false,
+    "frame": "task",
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": false
   },
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:player_hurt_entity",
-      "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:llama",
-              "nbt": "{Tags:[\"tc.body\"]}"
-            }
-          }
-        ]
-      }
+      "trigger": "minecraft:tick"
     }
-  },
-  "rewards": {
-    "function": "tc:entity/interact/trigger"
   }
 }

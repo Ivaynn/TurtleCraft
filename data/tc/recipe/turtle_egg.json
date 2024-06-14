@@ -20,7 +20,10 @@
         }
     },
     "result": {
-        "item": "minecraft:knowledge_book",
-        "count": 1
+        "id": "minecraft:knowledge_book",
+        "count": 1,
+        "components": {
+            "minecraft:custom_data": "{tc:\"craft_book\"}"
+        }
     }
 }

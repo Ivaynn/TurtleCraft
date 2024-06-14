@@ -9,7 +9,7 @@ execute if score $llama_slots tc.tmp matches 1.. run function tc:code/run/instru
 
 
 # Put items back in llama
-loot replace entity @s horse.0 15 mine 10028 1 10028 minecraft:air{drop_contents:1b}
+loot replace entity @s horse.0 15 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Effects

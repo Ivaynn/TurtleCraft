@@ -3,7 +3,7 @@ gamerule maxCommandChainLength 1000000000
 
 
 # Reset advancement triggers
-advancement revoke @a only tc:root
+advancement revoke @a only tc:hurt_turtle
 advancement revoke @a only tc:craft_egg
 
 

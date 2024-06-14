@@ -1,0 +1,26 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:zombie_spawn_egg"
+                }
+            ]
+        }
+    ],
+    "functions": [
+        {
+            "function": "minecraft:set_components",
+            "components": {
+                "minecraft:entity_data": {
+                    "id": "minecraft:marker",
+                    "Tags": [
+                        "my_tag_here"
+                    ]
+                }
+            }
+        }
+    ]
+}

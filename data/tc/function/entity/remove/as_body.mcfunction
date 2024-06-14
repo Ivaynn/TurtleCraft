@@ -11,7 +11,7 @@ setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraf
 execute if predicate tc:holding_equipment run data remove entity @s HandItems[0].tag.tc
 execute unless predicate tc:holding_equipment run data remove entity @s HandItems[0]
 data modify block 10028 1 10028 Items[0] set from entity @s HandItems[0]
-loot insert 10028 0 10028 mine 10028 1 10028 minecraft:air{drop_contents:1b}
+loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 # Drop: Egg
 setblock 10028 1 10028 minecraft:bedrock
@@ -20,10 +20,10 @@ loot insert 10028 1 10028 loot tc:egg
 data modify block 10028 1 10028 Items[0].tag.display.Name set from entity @s CustomName
 data modify block 10028 1 10028 Items[0].tag.EntityTag.data.Instructions set from entity @s ArmorItems[0].tag.Instructions
 execute store result block 10028 1 10028 Items[0].tag.EntityTag.data.Fuel int 1 run scoreboard players get @s tc.fuel
-loot insert 10028 0 10028 mine 10028 1 10028 minecraft:air{drop_contents:1b}
+loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 # Drop: Apply
-execute at @s run loot spawn ~ ~1 ~ mine 10028 0 10028 minecraft:air{drop_contents:1b}
+execute at @s run loot spawn ~ ~1 ~ mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Effects

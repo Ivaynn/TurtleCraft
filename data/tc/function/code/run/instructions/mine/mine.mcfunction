@@ -9,7 +9,7 @@ data modify block 10028 1 10028 Items set from storage tc:tmp llama_items
 
 # Transfer all items to a second shulker, that way they start at slot 0 (llama inventory start at slot 2 for some reason)
 setblock 10028 0 10028 minecraft:yellow_shulker_box
-loot insert 10028 0 10028 mine 10028 1 10028 minecraft:air{drop_contents:1b}
+loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Insert drops on chest
@@ -17,7 +17,7 @@ execute store result score $item_count tc.tmp run loot insert 10028 0 10028 mine
 
 
 # Transfer shulker items back to llama, now with mined item (and organised)
-loot replace entity @s horse.0 15 mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot replace entity @s horse.0 15 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Check if the llama items changed

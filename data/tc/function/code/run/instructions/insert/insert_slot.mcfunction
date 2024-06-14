@@ -10,7 +10,7 @@ scoreboard players operation $block_count_start tc.tmp = $block_item_count tc.tm
 setblock 10028 0 10028 minecraft:bedrock
 setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
 data modify block 10028 0 10028 Items[0] set from storage tc:tmp llama_items[0]
-loot insert ~ ~ ~ mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot insert ~ ~ ~ mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Get new total item count in block ($block_item_count tc.tmp)
@@ -28,4 +28,4 @@ execute store result score $llama_item_count tc.tmp run data get storage tc:tmp 
 
 scoreboard players operation $llama_item_count tc.tmp -= $block_item_count tc.tmp
 execute store result block 10028 0 10028 Items[0].Count byte 1 run scoreboard players get $llama_item_count tc.tmp
-loot insert 10028 1 10028 mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]

@@ -7,5 +7,5 @@ data modify block 10028 0 10028 Items[0].tag.display.Name set from storage tc:tm
 data modify block 10028 0 10028 Items[0].tag.EntityTag.data.Instructions set from storage tc:tmp new_turtle.Instructions
 data modify block 10028 0 10028 Items[0].tag.EntityTag.data.Fuel set from storage tc:tmp new_turtle.Fuel
 
-loot spawn ~ ~0.25 ~ mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot spawn ~ ~0.25 ~ mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 setblock 10028 0 10028 minecraft:bedrock

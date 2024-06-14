@@ -39,19 +39,19 @@ data modify block 10028 1 10028 Items set from storage tc:tmp llama_items
 
 # Create a second shulker, insert items from llama into that shulker, add berries
 setblock 10028 0 10028 minecraft:yellow_shulker_box
-loot insert 10028 0 10028 mine 10028 1 10028 minecraft:air{drop_contents:1b}
+loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 setblock 10028 1 10028 minecraft:bedrock
 setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:glow_berries",Count:1b}]}
-loot insert 10028 0 10028 mine 10028 1 10028 minecraft:air{drop_contents:1b}
+loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Transfer shulker items back to llama, now with berries
-loot replace entity @s horse.0 15 mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot replace entity @s horse.0 15 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # If llama items didn't change, drop item
 execute store result score $success tc.tmp run data modify storage tc:tmp llama_items set from entity @s Items
-execute if score $success tc.tmp matches 0 align xyz run loot spawn ~0.5 ~0.5 ~0.5 mine 10028 1 10028 minecraft:air{drop_contents:1b}
+execute if score $success tc.tmp matches 0 align xyz run loot spawn ~0.5 ~0.5 ~0.5 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Clear tmp

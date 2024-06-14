@@ -16,7 +16,7 @@ data modify storage tc:tmp item.tag.display.Lore set value ['{"text":"Turtle Dis
 setblock 10028 0 10028 minecraft:yellow_shulker_box
 item replace block 10028 0 10028 container.0 with minecraft:stone
 data modify block 10028 0 10028 Items[0] set from storage tc:tmp item
-loot replace entity @s weapon.mainhand 1 mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot replace entity @s weapon.mainhand 1 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Clear tmp

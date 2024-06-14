@@ -1,5 +1,5 @@
 # This function is triggered by an advancement
-advancement revoke @s only tc:root
+advancement revoke @s only tc:hurt_turtle
 
 # Check if the nearest turtle took damage this tick
 tag @s add tc.player

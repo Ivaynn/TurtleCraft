@@ -10,18 +10,18 @@ scoreboard players operation $llama_count_start tc.tmp = $llama_item_count tc.tm
 setblock 10028 0 10028 minecraft:yellow_shulker_box
 data modify block 10028 0 10028 Items set from entity @s Items
 setblock 10028 1 10028 minecraft:yellow_shulker_box
-loot insert 10028 1 10028 mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Insert item into shulker box
 setblock 10028 0 10028 minecraft:bedrock
 setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
 data modify block 10028 0 10028 Items[0] set from storage tc:tmp dropped_item
-loot insert 10028 1 10028 mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Update llama items
-loot replace entity @s horse.0 15 mine 10028 1 10028 minecraft:air{drop_contents:1b}
+loot replace entity @s horse.0 15 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 # Get new total item count in llama ($llama_item_count tc.tmp)

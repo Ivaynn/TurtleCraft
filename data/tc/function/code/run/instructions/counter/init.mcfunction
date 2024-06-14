@@ -64,7 +64,7 @@ execute if score $counter_merge tc.tmp matches 0.. run function tc:code/run/inst
 setblock 10028 0 10028 minecraft:bedrock
 setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stick",Count:1b}]}
 data modify block 10028 0 10028 Items[0].tag.Counters set from storage tc:tmp Counters
-loot replace entity @s armor.head 1 mine 10028 0 10028 minecraft:air{drop_contents:1b}
+loot replace entity @s armor.head 1 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
 

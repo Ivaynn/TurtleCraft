@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:coal"
+      "id": "minecraft:coal"
     },
     "title": {
       "text": "Overclock"
@@ -10,11 +10,11 @@
       "text": "Use fuel items"
     },
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "tc:save_to_disc",
+  "parent": "tc:get_egg",
   "criteria": {
     "impossible": {
       "trigger": "minecraft:impossible"
