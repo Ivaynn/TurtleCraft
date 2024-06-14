@@ -1,0 +1,8 @@
+{
+  "values":[
+	"#tc:air",
+	"minecraft:water",
+	"minecraft:lava",
+	"#minecraft:replaceable"
+  ]
+}
