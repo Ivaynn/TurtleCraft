@@ -4,7 +4,7 @@ advancement grant @s only tc:equip
 
 # Store player's selected item
 data modify storage tc:tmp switch_item set from entity @s SelectedItem
-data modify storage tc:tmp switch_item.components."minecraft:custom_data".tc set value "clear_item"
+data modify storage tc:tmp switch_item.components."minecraft:custom_data".tc.ClearItem set value 1b
 
 
 # Give llama's item to player

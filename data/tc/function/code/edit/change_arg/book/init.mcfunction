@@ -6,7 +6,7 @@
 
 
 # Convert string to json - this turns new lines into "\n"
-data modify storage tc:tmp book.return set from entity @s SelectedItem.tag.pages[0]
+data modify storage tc:tmp book.return set from entity @s SelectedItem.components."minecraft:writable_book_content".pages[0].raw
 execute as @e[limit=1,type=minecraft:text_display,tag=tc.tmp,tag=tc.text] run function tc:code/edit/change_arg/book/as_text
 
 

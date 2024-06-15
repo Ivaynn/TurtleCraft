@@ -22,7 +22,7 @@ execute as @e[type=minecraft:marker,tag=tc.egg] at @s positioned ~ ~0.5 ~ align 
 # Update decor slot + clear invalid items
 # Using advancements caused desync so this runs every tick - worse performace for better results
 execute as @e[type=minecraft:llama,tag=tc.body] at @s if entity @a[distance=..10] run data modify entity @s body_armor_item set from entity @s HandItems[0]
-clear @a #tc:clear[minecraft:custom_data={tc:"clear_item"}]
+clear @a #tc:clear[minecraft:custom_data={tc:{ClearItem:1b}}]
 
 
 # Execute turtle code

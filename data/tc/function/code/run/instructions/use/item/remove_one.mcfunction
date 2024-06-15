@@ -2,7 +2,7 @@
 
 
 # Apply item nbt to block (shulker items, banner patters, bees, ...)
-execute if data storage tc:tmp llama_items[-1].tag run function tc:code/run/instructions/use/item/block_entity_tag
+execute if data storage tc:tmp llama_items[-1].components run function tc:code/run/instructions/use/item/block_entity_tag
 
 
 # Reduce count by 1

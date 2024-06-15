@@ -4,15 +4,15 @@ data modify storage tc:tmp tool set from entity @s HandItems[0]
 
 
 # Base damage / Attribute Modifier
-execute unless data storage tc:tmp tool.tag.AttributeModifiers[] run function tc:code/run/instructions/attack/base_damage
-execute if data storage tc:tmp tool.tag.AttributeModifiers[] run function tc:code/run/instructions/attack/modifiers
+execute unless data storage tc:tmp tool.components."minecraft:attribute_modifiers" run function tc:code/run/instructions/attack/base_damage
+execute if data storage tc:tmp tool.components."minecraft:attribute_modifiers" run function tc:code/run/instructions/attack/modifiers
 
 
 # Get enchantments
-execute store result score $sharp_lvl tc.tmp run data get storage tc:tmp tool.tag.Enchantments[{id:"minecraft:sharpness"}].lvl
-execute store result score $smite_lvl tc.tmp run data get storage tc:tmp tool.tag.Enchantments[{id:"minecraft:smite"}].lvl
-execute store result score $bane_lvl tc.tmp run data get storage tc:tmp tool.tag.Enchantments[{id:"minecraft:bane_of_arthropods"}].lvl
-execute store result score $fire_lvl tc.tmp run data get storage tc:tmp tool.tag.Enchantments[{id:"minecraft:fire_aspect"}].lvl
+execute store result score $sharp_lvl tc.tmp run data get storage tc:tmp tool.components."minecraft:enchantments".levels."minecraft:sharpness"
+execute store result score $smite_lvl tc.tmp run data get storage tc:tmp tool.components."minecraft:enchantments".levels."minecraft:smite"
+execute store result score $bane_lvl tc.tmp run data get storage tc:tmp tool.components."minecraft:enchantments".levels."minecraft:bane_of_arthropods"
+execute store result score $fire_lvl tc.tmp run data get storage tc:tmp tool.components."minecraft:enchantments".levels."minecraft:fire_aspect"
 
 
 # Apply modifiers from enchantments

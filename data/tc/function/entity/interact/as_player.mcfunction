@@ -11,7 +11,7 @@ execute as @a[tag=!tc.player] if score @s tc.id = @p[tag=tc.player] tc.id run fu
 
 
 # If turtle has no owner, this player is the new one
-execute as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] unless data entity @s ArmorItems[0].tag.Owner run function tc:entity/interact/new_owner
+execute as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] unless data entity @s ArmorItems[0].components."minecraft:custom_data".tc.Owner run function tc:entity/interact/new_owner
 
 
 # Choose action from player items/sneak

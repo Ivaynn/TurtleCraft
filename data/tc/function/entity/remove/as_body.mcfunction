@@ -17,9 +17,9 @@ loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_da
 setblock 10028 1 10028 minecraft:bedrock
 setblock 10028 1 10028 minecraft:yellow_shulker_box
 loot insert 10028 1 10028 loot tc:egg
-data modify block 10028 1 10028 Items[0].tag.display.Name set from entity @s CustomName
-data modify block 10028 1 10028 Items[0].tag.EntityTag.data.Instructions set from entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions
-execute store result block 10028 1 10028 Items[0].tag.EntityTag.data.Fuel int 1 run scoreboard players get @s tc.fuel
+data modify block 10028 1 10028 Items[0].components."minecraft:custom_name" set from entity @s CustomName
+data modify block 10028 1 10028 Items[0].components."minecraft:entity_data".data.Instructions set from entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions
+execute store result block 10028 1 10028 Items[0].components."minecraft:entity_data".data.Fuel int 1 run scoreboard players get @s tc.fuel
 loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 # Drop: Apply
@@ -31,7 +31,7 @@ execute at @s run particle minecraft:explosion ~ ~1.5 ~ 0 0 0 0 0 force @a
 
 
 # Clear entity data
-data merge entity @s {DeathLootTable:"tc:empty",ChestedHorse:0b,DecorItem:{id:"minecraft:air"},HandItems:[{},{}],ArmorItems:[{},{},{},{}]}
+data merge entity @s {DeathLootTable:"tc:empty",ChestedHorse:0b,body_armor_item:{id:"minecraft:air"},HandItems:[{},{}],ArmorItems:[{},{},{},{}]}
 data remove entity @s CustomName
 
 

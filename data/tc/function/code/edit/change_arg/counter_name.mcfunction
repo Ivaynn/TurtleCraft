@@ -8,12 +8,12 @@
 
 scoreboard players set $name_src tc.tmp 1
 execute if data entity @s SelectedItem.id run scoreboard players add $name_src tc.tmp 1
-execute if data entity @s SelectedItem.tag.display.Name run scoreboard players add $name_src tc.tmp 1
-execute if predicate tc:holding_book if data entity @s SelectedItem.tag.pages[0] run scoreboard players set $name_src tc.tmp 4
+execute if data entity @s SelectedItem.components."minecraft:custom_name" run scoreboard players add $name_src tc.tmp 1
+execute if predicate tc:holding_book if data entity @s SelectedItem.components."minecraft:writable_book_content".pages[0].raw run scoreboard players set $name_src tc.tmp 4
 
 execute if score $name_src tc.tmp matches 1 run data modify storage tc:tmp counter_name.name set value "name"
 execute if score $name_src tc.tmp matches 2 run function tc:code/edit/change_arg/counter_name_id
-execute if score $name_src tc.tmp matches 3 run data modify storage tc:tmp counter_name.name set from entity @s SelectedItem.tag.display.Name
+execute if score $name_src tc.tmp matches 3 run data modify storage tc:tmp counter_name.name set from entity @s SelectedItem.components."minecraft:custom_name"
 
 
 # Get name from book

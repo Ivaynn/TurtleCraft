@@ -1,5 +1,5 @@
 
-data merge entity @s {Tags:["tc.turtle","tc.body","tc.tmp"], NoAI:1b, Silent:1b, Tame:1b, Strength:5, ChestedHorse:1b, InLove:2147483647, PortalCooldown:2147483647, Rotation:[0.0f,30.0f], CustomNameVisible:0b, CustomName:'{"text":"Turtle"}', Health:1024f, Attributes:[{Name:"generic.max_health",Base:1024}], ArmorItems:[{id:"minecraft:stick",count:1b,tag:{Instructions:[{AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:1b, SafeMine:1b, ShowText:0b, DamagePlayers:0b}]}},{},{},{id:"minecraft:stick",count:1b,tag:{Counters:[]}}], ArmorDropChances:[-999.000F,-999.000F,-999.000F,-999.000F]}
+data merge entity @s {Tags:["tc.turtle","tc.body","tc.tmp"], NoAI:1b, Silent:1b, Tame:1b, Strength:5, ChestedHorse:1b, InLove:2147483647, PortalCooldown:2147483647, Rotation:[0.0f,30.0f], CustomNameVisible:0b, CustomName:'{"text":"Turtle"}', Health:1024f, Attributes:[{Name:"generic.max_health",Base:1024}], ArmorItems:[{id:"minecraft:stick",count:1b,components:{"minecraft:custom_data":{tc:{Instructions:[{AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:1b, SafeMine:1b, ShowText:0b, DamagePlayers:0b}]}}}},{},{},{id:"minecraft:stick",count:1b,components:{"minecraft:custom_data":{tc:{Counters:[]}}}}], ArmorDropChances:[-999.000F,-999.000F,-999.000F,-999.000F]}
 scoreboard players operation @s tc.id = $new tc.id
 scoreboard players operation @s tc.update_id = $update_id tc.tmp
 
