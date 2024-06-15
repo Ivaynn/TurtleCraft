@@ -39,4 +39,5 @@ execute store result score $block_item_count tc.tmp run data get storage tc:tmp 
 scoreboard players operation $block_item_count tc.tmp -= $llama_item_count tc.tmp
 
 execute store result storage tc:tmp block_items[0].count byte 1 run scoreboard players get $block_item_count tc.tmp
+execute unless score $block_item_count tc.tmp matches 1.. run data modify storage tc:tmp block_items[0].id set value "minecraft:air"
 data modify storage tc:tmp extra_items append from storage tc:tmp block_items[0]
