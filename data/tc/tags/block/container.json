@@ -6,6 +6,8 @@
 	"minecraft:dropper",
 	"minecraft:dispenser",
 	"minecraft:hopper",
-	"#minecraft:shulker_boxes"
+	"#minecraft:shulker_boxes",
+
+	"minecraft:crafter"
   ]
 }

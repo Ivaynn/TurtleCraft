@@ -15,3 +15,5 @@ execute if score $use_success tc.tmp matches 0 store success score $use_success 
 execute if score $use_success tc.tmp matches 0 store success score $use_success tc.tmp if data storage tc:tmp {run_line:{A:{item:"minecraft:spectral_arrow"}}} align xyz positioned ~0.5 ~0.5 ~0.5 summon minecraft:spectral_arrow run function tc:code/run/instructions/use/item/item_list/throwable
 execute if score $use_success tc.tmp matches 0 store success score $use_success tc.tmp if data storage tc:tmp {run_line:{A:{item:"minecraft:sweet_berries"}}} if block ~ ~ ~ #tc:replaceable run setblock ~ ~ ~ minecraft:sweet_berry_bush
 execute if score $use_success tc.tmp matches 0 store success score $use_success tc.tmp if data storage tc:tmp {run_line:{A:{item:"minecraft:glow_berries"}}} if block ~ ~ ~ #tc:replaceable run setblock ~ ~ ~ minecraft:cave_vines
+
+execute if score $use_success tc.tmp matches 0 store success score $use_success tc.tmp if data storage tc:tmp {run_line:{A:{item:"minecraft:wind_charge"}}} align xyz positioned ~0.5 ~0.5 ~0.5 summon minecraft:wind_charge run function tc:code/run/instructions/use/item/item_list/throwable

@@ -15,6 +15,18 @@ execute if block ~ ~ ~ minecraft:exposed_cut_copper run setblock ~ ~ ~ minecraft
 execute if block ~ ~ ~ minecraft:weathered_cut_copper run setblock ~ ~ ~ minecraft:exposed_cut_copper
 execute if block ~ ~ ~ minecraft:oxidized_cut_copper run setblock ~ ~ ~ minecraft:weathered_cut_copper
 
+execute if block ~ ~ ~ minecraft:exposed_chiseled_copper run setblock ~ ~ ~ minecraft:chiseled_copper
+execute if block ~ ~ ~ minecraft:weathered_chiseled_copper run setblock ~ ~ ~ minecraft:exposed_chiseled_copper
+execute if block ~ ~ ~ minecraft:oxidized_chiseled_copper run setblock ~ ~ ~ minecraft:weathered_chiseled_copper
+
+execute if block ~ ~ ~ minecraft:exposed_copper_bulb run setblock ~ ~ ~ minecraft:copper_bulb
+execute if block ~ ~ ~ minecraft:weathered_copper_bulb run setblock ~ ~ ~ minecraft:exposed_copper_bulb
+execute if block ~ ~ ~ minecraft:oxidized_copper_bulb run setblock ~ ~ ~ minecraft:weathered_copper_bulb
+
+execute if block ~ ~ ~ minecraft:exposed_copper_grate run setblock ~ ~ ~ minecraft:copper_grate
+execute if block ~ ~ ~ minecraft:weathered_copper_grate run setblock ~ ~ ~ minecraft:exposed_copper_grate
+execute if block ~ ~ ~ minecraft:oxidized_copper_grate run setblock ~ ~ ~ minecraft:weathered_copper_grate
+
 execute if block ~ ~ ~ minecraft:exposed_cut_copper_slab[type=bottom,waterlogged=false] run setblock ~ ~ ~ minecraft:cut_copper_slab[type=bottom,waterlogged=false]
 execute if block ~ ~ ~ minecraft:exposed_cut_copper_slab[type=top,waterlogged=false] run setblock ~ ~ ~ minecraft:cut_copper_slab[type=top,waterlogged=false]
 execute if block ~ ~ ~ minecraft:exposed_cut_copper_slab[type=double,waterlogged=false] run setblock ~ ~ ~ minecraft:cut_copper_slab[type=double,waterlogged=false]

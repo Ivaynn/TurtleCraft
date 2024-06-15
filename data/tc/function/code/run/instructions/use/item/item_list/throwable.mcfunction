@@ -26,3 +26,4 @@ execute unless score $launch_direction tc.tmp matches 1 store success score $lau
 
 # Clear tmp
 scoreboard players reset $launch_direction tc.tmp
+return 1
