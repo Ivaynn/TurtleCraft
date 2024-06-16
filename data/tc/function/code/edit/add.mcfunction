@@ -14,7 +14,7 @@ execute if score $argument tc.tmp matches 8 run data modify storage tc:tmp new_l
 execute if score $argument tc.tmp matches 9 run data modify storage tc:tmp new_line set value {C:9, A:{item:"all"}}
 execute if score $argument tc.tmp matches 10 run data modify storage tc:tmp new_line set value {C:10, A:{direction:"forward"}}
 
-execute if score $argument tc.tmp matches 90 run data modify storage tc:tmp new_line set value {C:90}
+execute if score $argument tc.tmp matches 90 run data modify storage tc:tmp new_line set value {C:90, A:{comment:"                    "}}
 execute if score $argument tc.tmp matches 91 run data modify storage tc:tmp new_line set value {C:91, A:{name:"name", operation: "=", type:"value", value:0}}
 execute if score $argument tc.tmp matches 92 run data modify storage tc:tmp new_line set value {C:92, A:{condition:"item", item:"all"}}
 execute if score $argument tc.tmp matches 93 run data modify storage tc:tmp new_line set value {C:93, A:{condition:"item", item:"all"}}

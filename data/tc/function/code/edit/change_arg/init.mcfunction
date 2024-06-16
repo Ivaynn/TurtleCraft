@@ -36,6 +36,7 @@ execute if score $command tc.tmp matches 5..7 run function tc:code/edit/change_a
 execute if score $command tc.tmp matches 8..9 run function tc:code/edit/change_arg/orange_group
 execute if score $command tc.tmp matches 10 run function tc:code/edit/change_arg/lime_group
 
+execute if score $command tc.tmp matches 90 run function tc:code/edit/change_arg/comment
 execute if score $command tc.tmp matches 91 run function tc:code/edit/change_arg/counter
 execute if score $command tc.tmp matches 92..93 run function tc:code/edit/change_arg/if
 execute if score $command tc.tmp matches 94 run function tc:code/edit/change_arg/fuel

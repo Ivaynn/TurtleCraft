@@ -136,7 +136,7 @@ execute if score $command tc.tmp matches 10 if data storage tc:tmp {run_line:{A:
 execute if score $command tc.tmp matches 90..93 run function tc:code/run/skip_purple_delay
 execute if score $command tc.tmp matches 95 run function tc:code/run/skip_purple_delay
 
-# empty (90)
+# empty/comment (90)
 
 # counter (91)
 execute if score $command tc.tmp matches 91 run function tc:code/run/instructions/counter/init

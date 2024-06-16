@@ -29,8 +29,9 @@ execute if score $disp_command tc.tmp matches 10 run data modify storage tc:tmp 
 execute if score $disp_command tc.tmp matches 10 run data modify storage tc:tmp new_display.A1 set from storage tc:tmp list_end[0].A.direction
 
 
-# empty
-execute if score $disp_command tc.tmp matches 90 run data modify storage tc:tmp new_display.C set value '{"text":"          "}'
+# empty/comment
+execute if score $disp_command tc.tmp matches 90 run data modify storage tc:tmp new_display.C set value '{"text":":","color":"#A2A2A2"}'
+execute if score $disp_command tc.tmp matches 90 run data modify storage tc:tmp new_display.A1 set from storage tc:tmp list_end[0].A.comment
 
 # counter <name> <operation> <type> <value>
 execute if score $disp_command tc.tmp matches 91 run data modify storage tc:tmp new_display.C set value '{"text":"counter","color":"#FD93FD"}'
