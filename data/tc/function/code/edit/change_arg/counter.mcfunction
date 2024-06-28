@@ -52,7 +52,8 @@ execute if score $argument tc.tmp matches 4 if data storage tc:tmp {edit_arg:{ty
 # [pos] value (switch): x y z
 execute if score $argument tc.tmp matches 4 if data storage tc:tmp {edit_arg:{type:"pos",value:"x"}} run data modify storage tc:tmp list_start[-1].A.value set value "y"
 execute if score $argument tc.tmp matches 4 if data storage tc:tmp {edit_arg:{type:"pos",value:"y"}} run data modify storage tc:tmp list_start[-1].A.value set value "z"
-execute if score $argument tc.tmp matches 4 if data storage tc:tmp {edit_arg:{type:"pos",value:"z"}} run data modify storage tc:tmp list_start[-1].A.value set value "x"
+execute if score $argument tc.tmp matches 4 if data storage tc:tmp {edit_arg:{type:"pos",value:"z"}} run data modify storage tc:tmp list_start[-1].A.value set value "r"
+execute if score $argument tc.tmp matches 4 if data storage tc:tmp {edit_arg:{type:"pos",value:"r"}} run data modify storage tc:tmp list_start[-1].A.value set value "x"
 
 
 # [random] value (int): -10 -1 +1 +10
