@@ -29,7 +29,7 @@ function tc:code/run/instructions/take/count_llama_items
 
 
 # Play sound
-execute if score $llama_item_count tc.tmp > $llama_count_start tc.tmp unless score $sound_played tc.tmp matches 1 run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 0.75 1.2
+execute if score $llama_item_count tc.tmp > $llama_count_start tc.tmp unless score $sound_played tc.tmp matches 1 unless score $silent tc.tmp matches 1 run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 0.75 1.2
 execute if score $llama_item_count tc.tmp > $llama_count_start tc.tmp run scoreboard players set $sound_played tc.tmp 1
 
 

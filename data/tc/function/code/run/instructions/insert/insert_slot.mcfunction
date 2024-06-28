@@ -18,7 +18,7 @@ function tc:code/run/instructions/insert/count_block_items
 
 
 # Play sound
-execute if score $block_item_count tc.tmp > $block_count_start tc.tmp unless score $sound_played tc.tmp matches 1 run playsound minecraft:block.dispenser.dispense neutral @a ~ ~ ~ 1 1.5
+execute if score $block_item_count tc.tmp > $block_count_start tc.tmp unless score $sound_played tc.tmp matches 1 unless score $silent tc.tmp matches 1 run playsound minecraft:block.dispenser.dispense neutral @a ~ ~ ~ 1 1.5
 execute if score $block_item_count tc.tmp > $block_count_start tc.tmp run scoreboard players set $sound_played tc.tmp 1
 
 

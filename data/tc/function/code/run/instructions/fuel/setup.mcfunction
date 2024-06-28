@@ -13,7 +13,7 @@ loot replace entity @s horse.0 15 mine 10028 1 10028 minecraft:stone[minecraft:c
 
 
 # Effects
-execute if score $fuel_success tc.tmp matches 1 run playsound minecraft:block.fire.extinguish neutral @a ~ ~ ~ 1 1.8
+execute if score $fuel_success tc.tmp matches 1 unless score $silent tc.tmp matches 1 run playsound minecraft:block.fire.extinguish neutral @a ~ ~ ~ 1 1.8
 execute if score $fuel_success tc.tmp matches 1 run particle minecraft:flame ~ ~1.5 ~ 0.25 0.25 0.25 0.05 5 normal @a
 
 

@@ -11,6 +11,7 @@ execute store result score $safe_mine tc.tmp run data get storage tc:tmp Options
 execute store result score $show_text tc.tmp run data get storage tc:tmp Options.ShowText 1
 execute store result score $damage_players tc.tmp run data get storage tc:tmp Options.DamagePlayers 1
 execute store result score $clear_counters tc.tmp run data get storage tc:tmp Options.ClearCounters 1
+execute store result score $silent tc.tmp run data get storage tc:tmp Options.Silent 1
 
 
 
@@ -47,12 +48,16 @@ execute if score $argument tc.tmp matches 7 if score $damage_players tc.tmp matc
 execute if score $argument tc.tmp matches 8 if score $clear_counters tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].ClearCounters set value 0b
 execute if score $argument tc.tmp matches 8 if score $clear_counters tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].ClearCounters set value 1b
 
+# Silent
+execute if score $argument tc.tmp matches 9 if score $silent tc.tmp matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].Silent set value 0b
+execute if score $argument tc.tmp matches 9 if score $silent tc.tmp matches 0 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].Silent set value 1b
+
 
 ## Other buttons
 
 # Reset
 execute if score $argument tc.tmp matches 99 run function tc:code/stop
-execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions set value [{AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:1b, SafeMine:1b, ShowText:0b, DamagePlayers:0b, ClearCounters:1b}]
+execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions set value [{AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:1b, SafeMine:1b, ShowText:0b, DamagePlayers:0b, ClearCounters:1b, Silent:0b}]
 execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",count:1b,tag:{Counters:[]}}
 
 # Pick up
@@ -85,3 +90,4 @@ scoreboard players reset $safe_mine tc.tmp
 scoreboard players reset $show_text tc.tmp
 scoreboard players reset $damage_players tc.tmp
 scoreboard players reset $clear_counters tc.tmp
+scoreboard players reset $silent tc.tmp

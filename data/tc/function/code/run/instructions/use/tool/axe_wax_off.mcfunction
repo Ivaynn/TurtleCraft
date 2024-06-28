@@ -1,4 +1,4 @@
-playsound minecraft:item.axe.wax_off neutral @a ~ ~ ~ 1 1
+execute unless score $silent tc.tmp matches 1 run playsound minecraft:item.axe.wax_off neutral @a ~ ~ ~ 1 1
 
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run particle minecraft:wax_off ~0.55 ~ ~ 0 0.25 0.25 0.1 5 normal @a
 execute align xyz positioned ~0.5 ~0.5 ~0.5 run particle minecraft:wax_off ~-0.55 ~ ~ 0 0.25 0.25 0.1 5 normal @a

@@ -12,7 +12,8 @@ tag @s remove tc.breakpoint
 
 
 # Effects
-playsound minecraft:block.lever.click neutral @a ~ ~ ~ 1 0.6
+execute store result score $silent tc.tmp run data get entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].Silent 1
+execute unless score $silent tc.tmp matches 1 run playsound minecraft:block.lever.click neutral @a ~ ~ ~ 1 0.6
 
 
 # Clear counters
@@ -21,5 +22,6 @@ execute if score $clear_counters tc.tmp matches 1 run data modify entity @s Armo
 
 
 # Clear tmp
+scoreboard players reset $silent tc.tmp
 scoreboard players reset $clear_counters tc.tmp
 scoreboard players reset $lines tc.tmp

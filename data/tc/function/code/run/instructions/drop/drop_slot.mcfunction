@@ -8,5 +8,5 @@ loot spawn ~ ~ ~ mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_
 
 
 # Play sound
-execute unless score $sound_played tc.tmp matches 1 run playsound minecraft:block.dispenser.dispense neutral @a ~ ~ ~ 1 1.5
+execute unless score $silent tc.tmp matches 1 unless score $sound_played tc.tmp matches 1 run playsound minecraft:block.dispenser.dispense neutral @a ~ ~ ~ 1 1.5
 scoreboard players set $sound_played tc.tmp 1

@@ -1,4 +1,4 @@
-playsound minecraft:item.axe.strip neutral @a ~ ~ ~ 1 1
+execute unless score $silent tc.tmp matches 1 run playsound minecraft:item.axe.strip neutral @a ~ ~ ~ 1 1
 
 execute if block ~ ~ ~ minecraft:oak_log[axis=x] run setblock ~ ~ ~ minecraft:stripped_oak_log[axis=x]
 execute if block ~ ~ ~ minecraft:oak_log[axis=y] run setblock ~ ~ ~ minecraft:stripped_oak_log[axis=y]

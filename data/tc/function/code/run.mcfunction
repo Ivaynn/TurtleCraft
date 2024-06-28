@@ -48,6 +48,7 @@ execute store result score $safe_mine tc.tmp run data get storage tc:tmp Instruc
 execute store result score $show_text tc.tmp run data get storage tc:tmp Instructions[0].ShowText 1
 execute store result score $damage_players tc.tmp run data get storage tc:tmp Instructions[0].DamagePlayers 1
 execute store result score $clear_counters tc.tmp run data get storage tc:tmp Instructions[0].ClearCounters 1
+execute store result score $silent tc.tmp run data get storage tc:tmp Instructions[0].Silent 1
 
 
 # Show text
@@ -219,6 +220,7 @@ scoreboard players reset $safe_mine tc.tmp
 scoreboard players reset $show_text tc.tmp
 scoreboard players reset $damage_players tc.tmp
 scoreboard players reset $clear_counters tc.tmp
+scoreboard players reset $silent tc.tmp
 
 scoreboard players reset $prev_line tc.tmp
 scoreboard players reset $line_arg tc.tmp

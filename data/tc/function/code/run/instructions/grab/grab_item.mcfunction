@@ -9,5 +9,5 @@ execute unless score $dropped_item_count tc.tmp matches 1.. run data modify enti
 
 
 # Play sound
-execute if score $dropped_item_count tc.tmp < $dropped_count_start tc.tmp unless score $sound_played tc.tmp matches 1 run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 0.75 1.2
+execute if score $dropped_item_count tc.tmp < $dropped_count_start tc.tmp unless score $sound_played tc.tmp matches 1 unless score $silent tc.tmp matches 1 run playsound minecraft:entity.item.pickup neutral @a ~ ~ ~ 0.75 1.2
 execute if score $dropped_item_count tc.tmp < $dropped_count_start tc.tmp run scoreboard players set $sound_played tc.tmp 1

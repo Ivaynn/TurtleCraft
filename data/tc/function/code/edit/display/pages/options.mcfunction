@@ -4,7 +4,7 @@ scoreboard players set @s tc.page 4
 
 # Clear top
 tellraw @s [{"text":"\nYou should not click on any text above this!\n\n","color":"red"},{"text":"                                               ","color":"dark_gray","strikethrough":true}]
-tellraw @s "\n\n\n\n\n\n"
+tellraw @s "\n\n\n\n"
 
 
 # Header
@@ -35,6 +35,9 @@ execute if score $damage_players tc.tmp matches 1 run tellraw @s ["",{"text":" D
 
 execute if score $clear_counters tc.tmp matches 0 run tellraw @s ["",{"text":" Clear Counters ","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"Counters are cleared on ","color":"gray"},{"text":"START","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -608"}}]
 execute if score $clear_counters tc.tmp matches 1 run tellraw @s ["",{"text":" Clear Counters ","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Counters are cleared on ","color":"gray"},{"text":"START","color":"dark_green"}]},"clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -608"}}]
+
+execute if score $silent tc.tmp matches 0 run tellraw @s ["",{"text":" Silent ","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"Stops the turtle's sounds","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -609"}}]
+execute if score $silent tc.tmp matches 1 run tellraw @s ["",{"text":" Silent ","color":"green","hoverEvent":{"action":"show_text","contents":[{"text":"Stops the turtle's sounds","color":"gray"}]},"clickEvent":{"action":"run_command","value":"/trigger tc.trigger set -609"}}]
 
 
 # Other

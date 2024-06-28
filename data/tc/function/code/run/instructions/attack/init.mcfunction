@@ -15,10 +15,10 @@ execute if score $damage_players tc.tmp matches 0 as @e[distance=..1.25,type=!mi
 
 # Sounds
 particle minecraft:sweep_attack ~ ~0.5 ~ 0 0 0 0 0 force @a
-execute unless score $target_count tc.tmp matches 1.. run playsound minecraft:entity.player.attack.nodamage neutral @a ~ ~0.5 ~ 1 1.15
-execute if score $target_count tc.tmp matches 1.. if score $damage tc.tmp matches ..10 run playsound minecraft:entity.player.attack.strong neutral @a ~ ~0.5 ~ 1 1.15
-execute if score $target_count tc.tmp matches 1.. if score $damage tc.tmp matches 11..99 run playsound minecraft:entity.player.attack.strong neutral @a ~ ~0.5 ~ 1 0.9
-execute if score $target_count tc.tmp matches 1.. if score $damage tc.tmp matches 100.. run playsound minecraft:entity.player.attack.crit neutral @a ~ ~0.5 ~ 1 1
+execute unless score $silent tc.tmp matches 1 unless score $target_count tc.tmp matches 1.. run playsound minecraft:entity.player.attack.nodamage neutral @a ~ ~0.5 ~ 1 1.15
+execute unless score $silent tc.tmp matches 1 if score $target_count tc.tmp matches 1.. if score $damage tc.tmp matches ..10 run playsound minecraft:entity.player.attack.strong neutral @a ~ ~0.5 ~ 1 1.15
+execute unless score $silent tc.tmp matches 1 if score $target_count tc.tmp matches 1.. if score $damage tc.tmp matches 11..99 run playsound minecraft:entity.player.attack.strong neutral @a ~ ~0.5 ~ 1 0.9
+execute unless score $silent tc.tmp matches 1 if score $target_count tc.tmp matches 1.. if score $damage tc.tmp matches 100.. run playsound minecraft:entity.player.attack.crit neutral @a ~ ~0.5 ~ 1 1
 
 
 # Clear tmp

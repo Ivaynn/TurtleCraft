@@ -2,7 +2,7 @@
 
 
 # Effect
-playsound block.dispenser.dispense neutral @a ~ ~ ~ 1 1.1
+execute unless score $silent tc.tmp matches 1 run playsound block.dispenser.dispense neutral @a ~ ~ ~ 1 1.1
 
 
 # If item is in inventory:

@@ -3,7 +3,7 @@
 
 # launch_strength tc.options = 150 by default
 data merge entity @s {pickup:1b, HasBeenShot:1b}
-playsound minecraft:entity.arrow.shoot neutral @a ~ ~ ~ 1 1
+execute unless score $silent tc.tmp matches 1 run playsound minecraft:entity.arrow.shoot neutral @a ~ ~ ~ 1 1
 
 # Launch Up (+Y)
 execute store success score $launch_direction tc.tmp if data storage tc:tmp {run_line:{A:{direction:"up"}}} store result entity @s Motion[1] double 0.01 run scoreboard players get launch_strength tc.options
