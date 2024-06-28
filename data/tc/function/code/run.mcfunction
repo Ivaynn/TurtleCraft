@@ -56,6 +56,10 @@ execute if score $show_text tc.tmp matches 1 run scoreboard players operation $c
 execute if score $show_text tc.tmp matches 1 as @e[limit=1,type=minecraft:text_display,tag=tc.tmp,tag=tc.text] run function tc:code/show_text
 
 
+# Breakpoint
+execute if data storage tc:tmp run_line.bp run function tc:code/breakpoint
+
+
 # Consume fuel + AutoFuel
 execute if score $command tc.tmp matches 1..10 if score use_fuel tc.options matches 1 if score @s tc.fuel matches 1.. run scoreboard players remove @s tc.fuel 1
 execute if score $auto_fuel tc.tmp matches 1 if score use_fuel tc.options matches 1 unless score @s tc.fuel matches 1.. run function tc:code/run/instructions/fuel/auto_fuel

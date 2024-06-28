@@ -9,7 +9,7 @@ scoreboard players remove $line_count tc.tmp 1
 
 
 # Make sure the player's selected line is valid for this turtle. If it's invalid -> select last line
-execute unless score @s tc.line matches 1.. run scoreboard players operation @s tc.line = $line_count tc.tmp
+execute unless score @s tc.line matches 1.. run scoreboard players set @s tc.line 1
 execute if score @s tc.line > $line_count tc.tmp run scoreboard players operation @s tc.line = $line_count tc.tmp
 
 

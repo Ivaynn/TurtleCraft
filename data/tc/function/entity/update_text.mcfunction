@@ -20,3 +20,4 @@ execute if score $text_id tc.tmp matches 7 run data modify entity @s text set va
 execute if score $text_id tc.tmp matches 8 run data modify entity @s text set value '{"text":"Stopped!","color":"red"}'
 execute if score $text_id tc.tmp matches 9 run data modify entity @s text set value '{"text":"Done!","color":"green"}'
 execute if score $text_id tc.tmp matches 10 run data modify entity @s text set value '{"text":"Hello!","color":"green"}'
+execute if score $text_id tc.tmp matches 11 run data modify entity @s text set value '{"text":"Breakpoint","color":"red"}'

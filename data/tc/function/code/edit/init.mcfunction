@@ -46,7 +46,8 @@ execute if score $operation tc.tmp matches 3 if score $argument tc.tmp matches 9
 # Show options to edit selected argument
 execute if score $operation tc.tmp matches 4 run scoreboard players set $display_page tc.tmp 2
 execute if score $operation tc.tmp matches 4 run scoreboard players set $pause tc.tmp 1
-execute if score $operation tc.tmp matches 4 if score $argument tc.tmp matches 1..87 run function tc:code/edit/change_arg/init
+execute if score $operation tc.tmp matches 4 if score $argument tc.tmp matches 1..86 run function tc:code/edit/change_arg/init
+execute if score $operation tc.tmp matches 4 if score $argument tc.tmp matches 87 run function tc:code/edit/toggle_breakpoint
 execute if score $operation tc.tmp matches 4 if score $argument tc.tmp matches 88..99 run function tc:code/edit/change_arg/numpad/init
 
 # Change page to edit / add line

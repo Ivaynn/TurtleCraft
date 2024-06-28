@@ -3,7 +3,7 @@
 
 # Conditions: argument id 1 and player is holding a writable book with content
 execute unless score $argument tc.tmp matches 1 run return 0
-execute unless data entity @s SelectedItem.components."minecraft:writable_book_content".pages[0].raw run return run data modify storage tc:tmp list_start[-1].A.comment set value "                    "
+execute unless data entity @s SelectedItem.components."minecraft:writable_book_content".pages[0].raw run return run data modify storage tc:tmp list_start[-1].A.comment set value ""
 
 
 # Convert string to json - this turns new lines into "\n"

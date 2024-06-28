@@ -85,6 +85,7 @@ data modify storage tc:tmp displays append from storage tc:tmp new_display
 # If line is selected, save it on tmp storage
 execute if score $index tc.tmp = $index_selected tc.tmp run data modify storage tc:tmp selected_display set from storage tc:tmp new_display
 execute if score $index tc.tmp = $index_selected tc.tmp run data modify storage tc:tmp selected_display.CID set from storage tc:tmp list_end[0].C
+execute if score $index tc.tmp = $index_selected tc.tmp run data modify storage tc:tmp selected_display.bp set from storage tc:tmp list_end[0].bp
 
 
 # Iterate

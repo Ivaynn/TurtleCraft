@@ -8,6 +8,8 @@ execute if score $lines tc.tmp matches 2.. if score @s tc.fuel matches 1.. unles
 execute if score $lines tc.tmp matches 2.. unless score @s tc.fuel matches 1.. run scoreboard players operation @s tc.timer = delay_normal tc.options
 execute if score $lines tc.tmp matches 2.. run scoreboard players reset @s tc.msg
 
+tag @s remove tc.breakpoint
+
 
 # Effects
 playsound minecraft:block.lever.click neutral @a ~ ~ ~ 1 0.6
