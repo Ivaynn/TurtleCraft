@@ -57,7 +57,7 @@ execute if score $argument tc.tmp matches 9 if score $silent tc.tmp matches 0 ru
 
 # Reset
 execute if score $argument tc.tmp matches 99 run function tc:code/stop
-execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions set value [{AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:0b, SafeMine:1b, ShowText:0b, DamagePlayers:0b, ClearCounters:1b, Silent:0b}]
+execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions set value [{Version:2, AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:0b, SafeMine:1b, ShowText:0b, DamagePlayers:0b, ClearCounters:1b, Silent:0b}]
 execute if score $argument tc.tmp matches 99 run data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",count:1b,components:{"minecraft:custom_data":{tc:{Counters:[]}}}}
 
 # Pick up

@@ -1,6 +1,6 @@
 
 # Store marker data + remove marker
-data modify storage tc:tmp new_turtle set from entity @s data
+data modify storage tc:tmp new_turtle set from entity @s data.tc
 data modify storage tc:tmp new_turtle.Name set from entity @s CustomName
 kill @s[type=minecraft:marker,tag=tc.egg]
 
