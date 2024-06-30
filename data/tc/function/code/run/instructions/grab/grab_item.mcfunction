@@ -5,7 +5,7 @@ execute store result score $dropped_count_start tc.tmp run data get entity @s It
 data modify storage tc:tmp dropped_item set from entity @s Item
 execute as @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run function tc:code/run/instructions/grab/as_llama
 execute store result entity @s Item.count byte 1 run scoreboard players get $dropped_item_count tc.tmp
-execute unless score $dropped_item_count tc.tmp matches 1.. run data modify entity @s Item.id set value "minecraft:air"
+execute unless score $dropped_item_count tc.tmp matches 1.. run data remove entity @s Item
 
 
 # Play sound

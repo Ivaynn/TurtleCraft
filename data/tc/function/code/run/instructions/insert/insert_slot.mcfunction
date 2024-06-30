@@ -28,5 +28,5 @@ execute store result score $llama_item_count tc.tmp run data get storage tc:tmp 
 
 scoreboard players operation $llama_item_count tc.tmp -= $block_item_count tc.tmp
 execute store result block 10028 0 10028 Items[0].count byte 1 run scoreboard players get $llama_item_count tc.tmp
-execute unless score $llama_item_count tc.tmp matches 1.. run data modify block 10028 0 10028 Items[0].id set value "minecraft:air"
+execute unless score $llama_item_count tc.tmp matches 1.. run return run data remove block 10028 0 10028 Items[0]
 loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
