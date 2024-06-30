@@ -18,7 +18,7 @@ execute unless score $silent tc.tmp matches 1 run playsound minecraft:block.leve
 
 # Clear counters
 execute store result score $clear_counters tc.tmp run data get entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].ClearCounters 1
-execute if score $clear_counters tc.tmp matches 1 run data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",count:1b,tag:{Counters:[]}}
+execute if score $clear_counters tc.tmp matches 1 run data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",count:1b,components:{"minecraft:custom_data":{tc:{Counters:[]}}}}
 
 
 # Clear tmp

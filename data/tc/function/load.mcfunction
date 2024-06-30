@@ -4,7 +4,6 @@ gamerule maxCommandChainLength 1000000000
 
 # Reset advancement triggers
 advancement revoke @a only tc:hurt_turtle
-advancement revoke @a only tc:craft_egg
 
 
 # Do this for every dimension - Blocks at [10028 0 10028] and [10028 1 10028] will be replaced with bedrock
