@@ -8,4 +8,3 @@ execute if score $llama_item tc.tmp matches 0 run return 1
 
 # If the item was replaced, then it was not what it should be, clear all invalid items
 execute as @e[type=minecraft:item,distance=..10] if data entity @s Item.components."minecraft:custom_data".tc.ClearItem run kill @s
-clear @a #tc:clear[minecraft:custom_data={tc:{ClearItem:1b}}]

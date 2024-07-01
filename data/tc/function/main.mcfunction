@@ -21,6 +21,7 @@ execute as @e[type=minecraft:marker,tag=tc.egg] at @s positioned ~ ~0.5 ~ align 
 
 # Lock llamas' decor slot
 execute as @e[type=minecraft:llama,tag=tc.body] at @s if entity @a[distance=..10] run function tc:entity/llama_slot_item
+clear @a #tc:clear[minecraft:custom_data={tc:{ClearItem:1b}}]
 
 
 # Execute turtle code

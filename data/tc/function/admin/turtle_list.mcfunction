@@ -2,6 +2,7 @@
 
 tellraw @s ["",{"text":"\n Turtle List","color":"dark_aqua","bold":true}]
 
+scoreboard players set $found_count tc.tmp 0
 tag @s add tc.tmp_player
 execute as @e[type=minecraft:llama,tag=tc.body] at @s run function tc:entity/print_info
 tag @s remove tc.tmp_player
