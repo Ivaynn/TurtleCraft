@@ -1,0 +1,16 @@
+[
+    {
+        "function": "minecraft:copy_custom_data",
+        "source": {
+            "type": "minecraft:storage",
+            "source": "tc:tmp"
+        },
+        "ops": [
+            {
+                "source": "upgrade_data",
+                "target": "tc",
+                "op": "replace"
+            }
+        ]
+    }
+]

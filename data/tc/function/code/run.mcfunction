@@ -1,6 +1,10 @@
 # Executed by tc.body - all attached entities have "tc.tmp"
 
 
+# Check for version upgrades
+execute unless score @s tc.version matches 2.. run function tc:entity/upgrade_version/init
+
+
 # Check forceloaded chunks
 execute unless loaded 10028 ~ 10028 run function tc:forceload
 execute unless loaded 10028 ~ 10028 run return 0

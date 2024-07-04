@@ -16,6 +16,11 @@ execute store result score @s tc.fuel run data get storage tc:tmp new_turtle.Fue
 scoreboard players set @s tc.msg 10
 
 
+# Program version
+execute store result score @s tc.version run data get storage tc:tmp new_turtle.Instructions[0].Version
+execute unless score @s tc.version matches 2.. run function tc:entity/upgrade_version/init
+
+
 # Ride
 ride @s mount @e[limit=1,type=minecraft:block_display,tag=tc.tmp,tag=tc.base]
 

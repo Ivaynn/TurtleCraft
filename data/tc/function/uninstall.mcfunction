@@ -22,3 +22,4 @@ scoreboard objectives remove tc.relog
 scoreboard objectives remove tc.msg
 scoreboard objectives remove tc.page
 scoreboard objectives remove tc.numpad
+scoreboard objectives remove tc.version

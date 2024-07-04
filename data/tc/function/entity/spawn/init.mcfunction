@@ -1,7 +1,15 @@
 
-# Store marker data + remove marker
+# Store marker data
 data modify storage tc:tmp new_turtle set from entity @s data.tc
 data modify storage tc:tmp new_turtle.Name set from entity @s CustomName
+
+
+# Old version support
+execute if data entity @s data.Instructions run data modify storage tc:tmp new_turtle.Instructions set from entity @s data.Instructions
+execute if data entity @s data.Fuel run data modify storage tc:tmp new_turtle.Fuel set from entity @s data.Fuel
+
+
+# Remove self
 kill @s[type=minecraft:marker,tag=tc.egg]
 
 
