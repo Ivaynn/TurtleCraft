@@ -1,14 +1,20 @@
 # Executed by the player. All turtle components have tag "tc.tmp"
 
+
 # If turtle is locked - check player UUID
 data modify storage tc:tmp uuid.owner set from entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].components."minecraft:custom_data".tc.Owner.UUID
 data modify storage tc:tmp uuid.self set from entity @s UUID
 execute store success score $different_uuid tc.tmp run data modify storage tc:tmp uuid.owner set from storage tc:tmp uuid.self
 
 
+
 # Clear tmp
 scoreboard players reset $turtle_lock tc.tmp
 data remove storage tc:tmp uuid
+
+
+# Bypass locks tag
+execute as @s[tag=tc.bypass_locks] run scoreboard players set $different_uuid tc.tmp 0
 
 
 # If owner == player, continue

@@ -13,6 +13,10 @@ execute if score $turtle_lock tc.tmp matches 1 run data remove storage tc:tmp uu
 scoreboard players reset $turtle_lock tc.tmp
 
 
+# Bypass locks tag
+execute as @s[tag=tc.bypass_locks] run scoreboard players set $different_uuid tc.tmp 0
+
+
 # If owner == player, continue
 execute unless score $different_uuid tc.tmp matches 1 run function tc:code/edit/init
 
