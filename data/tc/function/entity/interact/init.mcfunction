@@ -1,8 +1,8 @@
 # Executed by tc.body - player has "tc.player" tag
 
 
-# Reset health
-data merge entity @s {Health:1024f,Fire:0s,HurtTime:0s}
+# Reset nbt
+data merge entity @s {Health:1024f,Fire:-1s,HurtTime:0s}
 
 
 

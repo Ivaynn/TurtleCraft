@@ -1,8 +1,9 @@
 # Executed by tc.body - all attached entities have "tc.tmp"
 
 # Reset nbt
-execute unless data entity @s {Fire:0s} run playsound minecraft:entity.generic.extinguish_fire neutral @a ~ ~ ~ 1 1
-data modify entity @s Fire set value 0s
+execute store result score $silent tc.tmp run data get entity @s ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].Silent 1
+execute unless score $silent tc.tmp matches 1 unless data entity @s {Fire:-1s} run playsound minecraft:entity.generic.extinguish_fire neutral @a ~ ~ ~ 1 1
+data modify entity @s Fire set value -1s
 
 
 # Refresh effects
@@ -34,5 +35,6 @@ execute at @s run tp @e[limit=1,type=minecraft:text_display,tag=tc.tmp,tag=tc.te
 
 
 # Clear tmp
+scoreboard players reset $silent tc.tmp
 scoreboard players reset $angle tc.tmp
 scoreboard players reset $text_id tc.tmp

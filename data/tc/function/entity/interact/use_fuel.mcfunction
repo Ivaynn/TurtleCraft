@@ -36,11 +36,13 @@ execute if score $fuel_power tc.tmp matches 1.. run item replace entity @s weapo
 
 
 # Effects
-execute if score $fuel_power tc.tmp matches 1.. at @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run playsound minecraft:block.fire.extinguish neutral @a ~ ~1 ~ 1 1.8
+execute store result score $silent tc.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] ArmorItems[0].components."minecraft:custom_data".tc.Instructions[0].Silent 1
+execute unless score $silent tc.tmp matches 1 if score $fuel_power tc.tmp matches 1.. at @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run playsound minecraft:block.fire.extinguish neutral @a ~ ~1 ~ 1 1.8
 execute if score $fuel_power tc.tmp matches 1.. at @e[limit=1,type=minecraft:llama,tag=tc.tmp,tag=tc.body] run particle minecraft:flame ~ ~1.5 ~ 0.25 0.25 0.25 0.05 5 normal @a
 
 
 # Clear tmp
+scoreboard players reset $silent tc.tmp
 scoreboard players reset $fuel_count tc.tmp
 scoreboard players reset $fuel_power tc.tmp
 scoreboard players reset $fuel_level tc.tmp
