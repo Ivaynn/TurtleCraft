@@ -1,11 +1,11 @@
-# This function ignores every attribute that isn't "generic.attack_damage"
+# This function ignores every attribute that isn't "attack_damage"
 
 # Get operation and amount (scaled 100 for accuracy)
-data modify storage tc:tmp attribute_op set from storage tc:tmp tool.components."minecraft:attribute_modifiers".modifiers.[{type:"minecraft:generic.attack_damage"}].operation
+data modify storage tc:tmp attribute_op set from storage tc:tmp tool.components."minecraft:attribute_modifiers".modifiers.[{type:"minecraft:attack_damage"}].operation
 execute if data storage tc:tmp {attribute_op:"add_value"} run scoreboard players set $mod_operation tc.tmp 0
 execute if data storage tc:tmp {attribute_op:"add_multiplied_base"} run scoreboard players set $mod_operation tc.tmp 1
 execute if data storage tc:tmp {attribute_op:"add_multiplied_total"} run scoreboard players set $mod_operation tc.tmp 2
-execute store result score $mod_amount tc.tmp run data get storage tc:tmp tool.components."minecraft:attribute_modifiers".modifiers.[{type:"minecraft:generic.attack_damage"}].amount 100
+execute store result score $mod_amount tc.tmp run data get storage tc:tmp tool.components."minecraft:attribute_modifiers".modifiers.[{type:"minecraft:attack_damage"}].amount 100
 
 
 # 0 - Add
