@@ -6,18 +6,10 @@
         "###"
     ],
     "key": {
-        "#": {
-            "tag": "minecraft:stone_crafting_materials"
-        },
-        "D": {
-            "item": "minecraft:diamond_block"
-        },
-        "O": {
-            "item": "minecraft:observer"
-        },
-        "R": {
-            "item": "minecraft:redstone_block"
-        }
+        "#": "#minecraft:stone_crafting_materials",
+        "D": "minecraft:diamond_block",
+        "O": "minecraft:observer",
+        "R": "minecraft:redstone_block"
     },
     "result": {
         "id": "minecraft:silverfish_spawn_egg",
