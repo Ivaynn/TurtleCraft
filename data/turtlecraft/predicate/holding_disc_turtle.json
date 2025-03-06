@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": "#turtlecraft:music_discs",
+        "predicates": {
+          "custom_data": "{turtlecraft:{TurtleDisc:1b}}"
+        }
+      }
+    }
+  }
+}

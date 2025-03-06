@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": "minecraft:silverfish_spawn_egg",
+        "predicates": {
+          "minecraft:custom_data": "{turtlecraft:{Egg:1b}}"
+        }
+      }
+    }
+  }
+}

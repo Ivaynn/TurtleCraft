@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:coal"
+    },
+    "title": {
+      "text": "Overclock"
+    },
+    "description": {
+      "text": "Use fuel items"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "turtlecraft:get_egg",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
