@@ -8,7 +8,7 @@
         "ops": [
             {
                 "source": "upgrade_data",
-                "target": "tc",
+                "target": "turtlecraft",
                 "op": "replace"
             }
         ]

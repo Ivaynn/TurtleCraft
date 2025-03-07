@@ -13,7 +13,7 @@ execute if score $valid_item turtlecraft.tmp matches 1 run data modify storage t
 
 
 # Give llama's item to player
-execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] if predicate turtlecraft:holding_equipment run data remove entity @s HandItems[0].components."minecraft:custom_data".tc
+execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] if predicate turtlecraft:holding_equipment run data remove entity @s HandItems[0].components."minecraft:custom_data".turtlecraft
 execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] unless predicate turtlecraft:holding_equipment run data remove entity @s HandItems[0]
 item replace entity @s weapon.mainhand from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] weapon
 

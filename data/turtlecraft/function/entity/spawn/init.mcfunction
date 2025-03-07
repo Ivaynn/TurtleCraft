@@ -1,6 +1,6 @@
 
 # Store marker data
-data modify storage turtlecraft:tmp new_turtle set from entity @s data.tc
+data modify storage turtlecraft:tmp new_turtle set from entity @s data.turtlecraft
 data modify storage turtlecraft:tmp new_turtle.Name set from entity @s CustomName
 
 

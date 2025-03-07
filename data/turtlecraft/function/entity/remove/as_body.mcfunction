@@ -8,7 +8,7 @@ data modify block 10028 0 10028 Items set from entity @s Items
 # Drop: Held item
 setblock 10028 1 10028 minecraft:bedrock
 setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",count:1b}]}
-execute if predicate turtlecraft:holding_equipment run data remove entity @s HandItems[0].components."minecraft:custom_data".tc
+execute if predicate turtlecraft:holding_equipment run data remove entity @s HandItems[0].components."minecraft:custom_data".turtlecraft
 execute unless predicate turtlecraft:holding_equipment run data remove entity @s HandItems[0]
 execute if data entity @s HandItems[0].id run data modify block 10028 1 10028 Items[0] set from entity @s HandItems[0]
 execute if data entity @s HandItems[0].id run loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]

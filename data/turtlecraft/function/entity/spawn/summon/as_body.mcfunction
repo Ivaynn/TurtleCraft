@@ -16,9 +16,9 @@ execute store result score @s turtlecraft.fuel run data get storage turtlecraft:
 scoreboard players set @s turtlecraft.msg 10
 
 
-# Program version
+# Program version (upgrade for future versions)
 execute store result score @s turtlecraft.version run data get storage turtlecraft:tmp new_turtle.Instructions[0].Version
-execute unless score @s turtlecraft.version matches 2.. run function turtlecraft:entity/upgrade_version/init
+execute unless score @s turtlecraft.version matches 3.. run scoreboard players set @s turtlecraft.version 3
 
 
 # Ride

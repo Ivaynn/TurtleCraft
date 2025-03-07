@@ -2,7 +2,7 @@
 
 
 # Check for version upgrades
-execute unless score @s turtlecraft.version matches 2.. run function turtlecraft:entity/upgrade_version/init
+execute unless score @s turtlecraft.version matches 3.. run return 0
 
 
 # Check forceloaded chunks
