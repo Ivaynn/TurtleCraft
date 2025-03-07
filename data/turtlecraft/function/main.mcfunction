@@ -10,9 +10,9 @@ execute if score global_update turtlecraft.options matches 1 run function turtle
 
 
 # Trigger commands
-scoreboard players enable @a turtlecraft.trigger
-execute as @a[scores={turtlecraft.trigger=..-1}] at @s run function turtlecraft:code/trigger/edit
-execute as @a[scores={turtlecraft.trigger=1..}] at @s run function turtlecraft:code/trigger/load
+scoreboard players enable @a TurtleCraft
+execute as @a[scores={TurtleCraft=..-1}] at @s run function turtlecraft:code/trigger/edit
+execute as @a[scores={TurtleCraft=1..}] at @s run function turtlecraft:code/trigger/load
 
 
 # Spawn turtle from egg

@@ -7,10 +7,10 @@ scoreboard players reset @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag
 
 ## Decode input
 # score = " Operation*100 + Argument "
-scoreboard players operation $operation turtlecraft.tmp = @s turtlecraft.trigger
+scoreboard players operation $operation turtlecraft.tmp = @s TurtleCraft
 scoreboard players operation $operation turtlecraft.tmp /= #100 turtlecraft.math
 
-scoreboard players operation $argument turtlecraft.tmp = @s turtlecraft.trigger
+scoreboard players operation $argument turtlecraft.tmp = @s TurtleCraft
 scoreboard players operation $argument turtlecraft.tmp %= #100 turtlecraft.math
 
 

@@ -16,7 +16,7 @@ scoreboard objectives add turtlecraft.update_id dummy
 scoreboard objectives add turtlecraft.line dummy
 scoreboard objectives add turtlecraft.timer dummy
 scoreboard objectives add turtlecraft.fuel dummy
-scoreboard objectives add turtlecraft.trigger trigger {"text":"Turtle Trigger"}
+scoreboard objectives add TurtleCraft trigger {"text":"Turtle Trigger"}
 scoreboard objectives add turtlecraft.tmp dummy
 scoreboard objectives add turtlecraft.relog minecraft.custom:minecraft.leave_game
 scoreboard objectives add turtlecraft.msg dummy

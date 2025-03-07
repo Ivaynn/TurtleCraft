@@ -8,7 +8,7 @@ tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 
 
 # Header
-tellraw @s [{"text":"","clickEvent":{"action":"run_command","value":"/trigger turtlecraft.trigger set -206"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to refresh","color":"gray"}]}},{"text":" Counters  ","color":"dark_aqua"},{"text":" R \n","color":"aqua"}]
+tellraw @s [{"text":"","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -206"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to refresh","color":"gray"}]}},{"text":" Counters  ","color":"dark_aqua"},{"text":" R \n","color":"aqua"}]
 
 
 # Print counters <name>: <value>
@@ -36,4 +36,4 @@ data remove storage turtlecraft:tmp json_arg
 
 
 # Tabs
-tellraw @s ["\n",{"text":"HOME ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger turtlecraft.trigger set -100"},"hoverEvent":{"action":"show_text","contents":[{"text":"Home Page","color":"gray"}]}},{"text":" EDIT ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger turtlecraft.trigger set -500"},"hoverEvent":{"action":"show_text","contents":[{"text":"Edit Saved Instructions","color":"gray"}]}},{"text":" COUNTERS ","color":"dark_aqua"},{"text":" OPTIONS ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger turtlecraft.trigger set -207"},"hoverEvent":{"action":"show_text","contents":[{"text":"Other Options","color":"gray"}]}},{"text":" MORE ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger turtlecraft.trigger set -208"},"hoverEvent":{"action":"show_text","contents":[{"text":"Credits and Tutorials","color":"gray"}]}}]
+tellraw @s ["\n",{"text":"HOME ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -100"},"hoverEvent":{"action":"show_text","contents":[{"text":"Home Page","color":"gray"}]}},{"text":" EDIT ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -500"},"hoverEvent":{"action":"show_text","contents":[{"text":"Edit Saved Instructions","color":"gray"}]}},{"text":" COUNTERS ","color":"dark_aqua"},{"text":" OPTIONS ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -207"},"hoverEvent":{"action":"show_text","contents":[{"text":"Other Options","color":"gray"}]}},{"text":" MORE ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -208"},"hoverEvent":{"action":"show_text","contents":[{"text":"Credits and Tutorials","color":"gray"}]}}]

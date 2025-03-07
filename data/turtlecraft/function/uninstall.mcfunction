@@ -14,7 +14,7 @@ scoreboard objectives remove turtlecraft.update_id
 scoreboard objectives remove turtlecraft.line
 scoreboard objectives remove turtlecraft.timer
 scoreboard objectives remove turtlecraft.fuel
-scoreboard objectives remove turtlecraft.trigger
+scoreboard objectives remove TurtleCraft
 scoreboard objectives remove turtlecraft.math
 scoreboard objectives remove turtlecraft.tmp
 scoreboard objectives remove turtlecraft.options
