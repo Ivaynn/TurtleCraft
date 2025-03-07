@@ -57,7 +57,7 @@ execute if score $argument turtlecraft.tmp matches 9 if score $silent turtlecraf
 
 # Reset
 execute if score $argument turtlecraft.tmp matches 99 run function turtlecraft:code/stop
-execute if score $argument turtlecraft.tmp matches 99 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions set value [{Version:2, AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:0b, SafeMine:1b, ShowText:0b, DamagePlayers:0b, ClearCounters:1b, Silent:0b}]
+execute if score $argument turtlecraft.tmp matches 99 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions set value [{Version:3, AutoMine:1b, PauseOnError:1b, Locked:1b, AutoFuel:0b, SafeMine:1b, ShowText:0b, DamagePlayers:0b, ClearCounters:1b, Silent:0b}]
 execute if score $argument turtlecraft.tmp matches 99 run data modify entity @s ArmorItems[3] set value {id:"minecraft:stick",count:1b,components:{"minecraft:custom_data":{turtlecraft:{Counters:[]}}}}
 
 # Pick up
