@@ -5,7 +5,8 @@ execute if score $argument turtlecraft.tmp matches 1 if data storage turtlecraft
 execute if score $argument turtlecraft.tmp matches 1 if data storage turtlecraft:tmp {edit_arg:{item:"coal"}} run data modify storage turtlecraft:tmp list_start[-1].A.item set value "charcoal"
 execute if score $argument turtlecraft.tmp matches 1 if data storage turtlecraft:tmp {edit_arg:{item:"charcoal"}} run data modify storage turtlecraft:tmp list_start[-1].A.item set value "coal_block"
 execute if score $argument turtlecraft.tmp matches 1 if data storage turtlecraft:tmp {edit_arg:{item:"coal_block"}} run data modify storage turtlecraft:tmp list_start[-1].A.item set value "blaze_rod"
-execute if score $argument turtlecraft.tmp matches 1 if data storage turtlecraft:tmp {edit_arg:{item:"blaze_rod"}} run data modify storage turtlecraft:tmp list_start[-1].A.item set value "any"
+execute if score $argument turtlecraft.tmp matches 1 if data storage turtlecraft:tmp {edit_arg:{item:"blaze_rod"}} run data modify storage turtlecraft:tmp list_start[-1].A.item set value "lava_bucket"
+execute if score $argument turtlecraft.tmp matches 1 if data storage turtlecraft:tmp {edit_arg:{item:"lava_bucket"}} run data modify storage turtlecraft:tmp list_start[-1].A.item set value "any"
 
 
 # Count (int): -10 -1 +1 +10
