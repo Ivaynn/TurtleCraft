@@ -9,6 +9,7 @@ execute if score $llama_slots turtlecraft.tmp matches 1.. run function turtlecra
 
 
 # Put items back in llama
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",count:1b},{Slot:1b,id:"minecraft:bucket",count:1b}]}
 loot replace entity @s horse.0 15 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
