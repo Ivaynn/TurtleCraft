@@ -5,10 +5,10 @@
 scoreboard players set $if_success turtlecraft.tmp 0
 
 # Special cases
-execute if data storage turtlecraft:tmp {run_line:{A:{block:"air"}}} if block ~ ~ ~ #turtlecraft:air run scoreboard players set $if_success turtlecraft.tmp 1
-execute if data storage turtlecraft:tmp {run_line:{A:{block:"water"}}} if block ~ ~ ~ minecraft:water run scoreboard players set $if_success turtlecraft.tmp 1
-execute if data storage turtlecraft:tmp {run_line:{A:{block:"lava"}}} if block ~ ~ ~ minecraft:lava run scoreboard players set $if_success turtlecraft.tmp 1
-execute if data storage turtlecraft:tmp {run_line:{A:{block:"powder_snow"}}} if block ~ ~ ~ minecraft:powder_snow run scoreboard players set $if_success turtlecraft.tmp 1
+execute if data storage turtlecraft:tmp {run_line:{A:{block:"air"}}} run return run execute store result score $if_success turtlecraft.tmp if block ~ ~ ~ #turtlecraft:air
+execute if data storage turtlecraft:tmp {run_line:{A:{block:"water"}}} run return run execute store result score $if_success turtlecraft.tmp if block ~ ~ ~ minecraft:water
+execute if data storage turtlecraft:tmp {run_line:{A:{block:"lava"}}} run return run execute store result score $if_success turtlecraft.tmp if block ~ ~ ~ minecraft:lava
+execute if data storage turtlecraft:tmp {run_line:{A:{block:"powder_snow"}}} run return run execute store result score $if_success turtlecraft.tmp if block ~ ~ ~ minecraft:powder_snow
 
 
 # Check what item drops with silk touch
