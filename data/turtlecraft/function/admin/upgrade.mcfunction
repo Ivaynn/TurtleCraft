@@ -30,8 +30,17 @@ scoreboard players operation limit_counter_display turtlecraft.options = limit_c
 scoreboard players operation launch_strength turtlecraft.options = launch_strength tc.options
 scoreboard players operation auto_refresh turtlecraft.options = auto_refresh tc.options
 scoreboard players operation paused turtlecraft.options = paused tc.options
-scoreboard objectives remove tc.options
 function turtlecraft:options/pages/update
+
+
+# Remove old scoreboard objectives that are not used by turtles to store data
+scoreboard objectives remove tc.trigger
+scoreboard objectives remove tc.math
+scoreboard objectives remove tc.tmp
+scoreboard objectives remove tc.options
+scoreboard objectives remove tc.relog
+scoreboard objectives remove tc.page
+scoreboard objectives remove tc.numpad
 
 
 # Update turtle disc
