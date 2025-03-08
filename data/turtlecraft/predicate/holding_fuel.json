@@ -5,6 +5,7 @@
     "equipment": {
       "mainhand": {
         "items": [
+          "minecraft:lava_bucket",
           "minecraft:coal_block",
           "minecraft:blaze_rod",
           "minecraft:coal",
