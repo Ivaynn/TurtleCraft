@@ -15,6 +15,7 @@ scoreboard players operation $fuel_consumed turtlecraft.tmp -= $fuel_count turtl
 
 
 # Add new fuel to score
+execute if data storage turtlecraft:tmp {this_slot:{id:"minecraft:lava_bucket"}} run scoreboard players set $fuel_power turtlecraft.tmp 100
 execute if data storage turtlecraft:tmp {this_slot:{id:"minecraft:coal_block"}} run scoreboard players set $fuel_power turtlecraft.tmp 80
 execute if data storage turtlecraft:tmp {this_slot:{id:"minecraft:blaze_rod"}} run scoreboard players set $fuel_power turtlecraft.tmp 12
 execute if data storage turtlecraft:tmp {this_slot:{id:"minecraft:coal"}} run scoreboard players set $fuel_power turtlecraft.tmp 8
