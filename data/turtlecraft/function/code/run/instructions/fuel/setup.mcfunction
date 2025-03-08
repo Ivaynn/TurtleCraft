@@ -28,5 +28,3 @@ scoreboard players reset $fuel_count turtlecraft.tmp
 scoreboard players reset $llama_slots turtlecraft.tmp
 scoreboard players reset $different_id turtlecraft.tmp
 scoreboard players reset $fuel_success turtlecraft.tmp
-scoreboard players reset $fuel.bucket.count turtlecraft.tmp
-scoreboard players reset $fuel.bucket.add turtlecraft.tmp

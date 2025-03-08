@@ -6,9 +6,7 @@ scoreboard players set $fuel_success turtlecraft.tmp 1
 
 
 # Count buckets
-scoreboard players set $fuel.bucket.count turtlecraft.tmp 0
-execute if data storage turtlecraft:tmp {this_slot:{id:"minecraft:lava_bucket"}} run scoreboard players operation $fuel.bucket.add turtlecraft.tmp = $fuel_consumed turtlecraft.tmp
-scoreboard players operation $fuel.bucket.count turtlecraft.tmp += $fuel.bucket.add turtlecraft.tmp
+execute if data storage turtlecraft:tmp {this_slot:{id:"minecraft:lava_bucket"}} run scoreboard players operation $fuel.bucket.count turtlecraft.tmp += $fuel_consumed turtlecraft.tmp
 
 
 # Update slot
