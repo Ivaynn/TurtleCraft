@@ -30,9 +30,8 @@ execute if score $fuel_power turtlecraft.tmp matches 1.. run tellraw @s ["",{"te
 execute unless score $fuel_power turtlecraft.tmp matches 1.. run tellraw @s ["",{"text":"\n> ","bold":true,"color":"dark_aqua"},{"text":"You can't use this! ","color":"gray"},"\n"]
 
 
-# Clear item
-execute if score $fuel_power turtlecraft.tmp matches 1.. if entity @s[nbt={SelectedItem:{id:"minecraft:lava_bucket"}}] run item replace entity @s weapon with minecraft:bucket
-execute if score $fuel_power turtlecraft.tmp matches 1.. unless entity @s[nbt={SelectedItem:{id:"minecraft:bucket"}}] run item replace entity @s weapon with minecraft:air
+# Clear item (or transform lava into empty bucket)
+execute if score $fuel_power turtlecraft.tmp matches 1.. run item modify entity @s weapon.mainhand turtlecraft:use_fuel
 
 
 # Effects

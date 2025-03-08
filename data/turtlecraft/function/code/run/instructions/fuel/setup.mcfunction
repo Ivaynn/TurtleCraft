@@ -4,12 +4,13 @@
 data modify storage turtlecraft:tmp llama_items set from entity @s Items
 execute store result score $llama_slots turtlecraft.tmp run data get storage turtlecraft:tmp llama_items
 
+scoreboard players set $fuel.bucket.count turtlecraft.tmp 0
 setblock 10028 1 10028 minecraft:yellow_shulker_box
 execute if score $llama_slots turtlecraft.tmp matches 1.. run function turtlecraft:code/run/instructions/fuel/for_slot
 
 
-# Put items back in llama
-setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:stone",count:1b},{Slot:1b,id:"minecraft:bucket",count:1b}]}
+# Put updated items back in llama
+execute if score $fuel.bucket.count turtlecraft.tmp matches 1.. run function turtlecraft:code/run/instructions/fuel/insert_buckets
 loot replace entity @s horse.0 15 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 
@@ -27,3 +28,5 @@ scoreboard players reset $fuel_count turtlecraft.tmp
 scoreboard players reset $llama_slots turtlecraft.tmp
 scoreboard players reset $different_id turtlecraft.tmp
 scoreboard players reset $fuel_success turtlecraft.tmp
+scoreboard players reset $fuel.bucket.count turtlecraft.tmp
+scoreboard players reset $fuel.bucket.add turtlecraft.tmp

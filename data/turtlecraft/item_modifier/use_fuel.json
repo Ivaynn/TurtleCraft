@@ -1,0 +1,42 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:bucket",
+        "conditions": [
+            {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "equipment": {
+                        "mainhand": {
+                            "items": "minecraft:lava_bucket"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "function": "minecraft:set_count",
+        "count": 0,
+        "add": false,
+        "conditions": [
+            {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "equipment": {
+                        "mainhand": {
+                            "items": [
+                                "minecraft:blaze_rod",
+                                "minecraft:coal_block",
+                                "minecraft:coal",
+                                "minecraft:charcoal"
+                            ]
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]
