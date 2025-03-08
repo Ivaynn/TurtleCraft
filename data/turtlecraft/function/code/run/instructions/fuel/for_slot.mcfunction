@@ -7,6 +7,7 @@ execute unless score $different_id turtlecraft.tmp matches 0 if data storage tur
 execute unless score $different_id turtlecraft.tmp matches 0 if data storage turtlecraft:tmp {fuel_id:"any"} if data storage turtlecraft:tmp {this_slot:{id:"minecraft:charcoal"}} run scoreboard players set $different_id turtlecraft.tmp 0
 execute unless score $different_id turtlecraft.tmp matches 0 if data storage turtlecraft:tmp {fuel_id:"any"} if data storage turtlecraft:tmp {this_slot:{id:"minecraft:coal_block"}} run scoreboard players set $different_id turtlecraft.tmp 0
 execute unless score $different_id turtlecraft.tmp matches 0 if data storage turtlecraft:tmp {fuel_id:"any"} if data storage turtlecraft:tmp {this_slot:{id:"minecraft:blaze_rod"}} run scoreboard players set $different_id turtlecraft.tmp 0
+execute unless score $different_id turtlecraft.tmp matches 0 if data storage turtlecraft:tmp {fuel_id:"any"} if data storage turtlecraft:tmp {this_slot:{id:"minecraft:lava_bucket"}} run scoreboard players set $different_id turtlecraft.tmp 0
 execute unless score $different_id turtlecraft.tmp matches 0 store success score $different_id turtlecraft.tmp run data modify storage turtlecraft:tmp this_slot.id set from storage turtlecraft:tmp fuel_id
 
 execute unless score $fuel_count turtlecraft.tmp matches 1.. run scoreboard players set $different_id turtlecraft.tmp 1
