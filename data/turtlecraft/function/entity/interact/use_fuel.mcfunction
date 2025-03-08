@@ -3,6 +3,7 @@
 advancement grant @s only turtlecraft:fuel
 
 # Get fuel power
+execute if data entity @s {SelectedItem:{id:"minecraft:lava_bucket"}} run scoreboard players set $fuel_power turtlecraft.tmp 100
 execute if data entity @s {SelectedItem:{id:"minecraft:coal_block"}} run scoreboard players set $fuel_power turtlecraft.tmp 80
 execute if data entity @s {SelectedItem:{id:"minecraft:blaze_rod"}} run scoreboard players set $fuel_power turtlecraft.tmp 12
 execute if data entity @s {SelectedItem:{id:"minecraft:coal"}} run scoreboard players set $fuel_power turtlecraft.tmp 8
@@ -13,7 +14,7 @@ execute if data entity @s {SelectedItem:{id:"minecraft:charcoal"}} run scoreboar
 scoreboard players operation $fuel_power turtlecraft.tmp *= fuel_multiplier turtlecraft.options
 scoreboard players operation $fuel_power turtlecraft.tmp /= #100 turtlecraft.math
 
-#tellraw @a ["",{"score":{"objective": "turtlecraft.tmp","name": "$fuel_power"}}]
+# tellraw @a ["",{"score":{"objective": "turtlecraft.tmp","name": "$fuel_power"}}]
 
 # Get count and apply result to turtle. Don't let it overflow (can't go above 2147483647)
 execute store result score $fuel_count turtlecraft.tmp run data get entity @s SelectedItem.count
@@ -30,7 +31,8 @@ execute unless score $fuel_power turtlecraft.tmp matches 1.. run tellraw @s ["",
 
 
 # Clear item
-execute if score $fuel_power turtlecraft.tmp matches 1.. run item replace entity @s weapon with minecraft:air
+execute if score $fuel_power turtlecraft.tmp matches 1.. if entity @s[nbt={SelectedItem:{id:"minecraft:lava_bucket"}}] run item replace entity @s weapon with minecraft:bucket
+execute if score $fuel_power turtlecraft.tmp matches 1.. unless entity @s[nbt={SelectedItem:{id:"minecraft:bucket"}}] run item replace entity @s weapon with minecraft:air
 
 
 # Effects
