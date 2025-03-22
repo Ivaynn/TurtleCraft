@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "stone",
+      "count": 1
+    },
+    "title": "block",
+    "description": "block",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "main": {
+      "trigger": "minecraft:default_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "crafter"
+            
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [["main"]],
+  "rewards": {
+    "function": "turtlecraft:block/interacted",
+    "loot": []
+  }
+}
