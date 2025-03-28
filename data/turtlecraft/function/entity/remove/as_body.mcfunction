@@ -31,7 +31,7 @@ execute at @s run particle minecraft:explosion ~ ~1.5 ~ 0 0 0 0 0 force @a
 
 
 # Clear entity data
-data merge entity @s {DeathLootTable:"turtlecraft:empty",ChestedHorse:0b,body_armor_item:{},HandItems:[{},{}],ArmorItems:[{},{},{},{}]}
+data merge entity @s {DeathLootTable:"turtlecraft:empty",ChestedHorse:0b,equipment:{feet:{},legs:{},chest:{},head:{},body:{},mainhand:{},offhand:{},saddle:{}}}
 data remove entity @s CustomName
 
 

@@ -24,7 +24,7 @@ execute if predicate turtlecraft:sneak if predicate turtlecraft:holding_fuel run
 execute if predicate turtlecraft:sneak if predicate turtlecraft:holding_lever run scoreboard players set $action turtlecraft.tmp 6
 execute if predicate turtlecraft:sneak if predicate turtlecraft:holding_stick run scoreboard players set $action turtlecraft.tmp 7
 
-execute if score use_tools turtlecraft.options matches 1 if predicate turtlecraft:sneak unless data entity @s SelectedItem unless data entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] {HandItems:[{id:"minecraft:red_stained_glass_pane"}]} run scoreboard players set $action turtlecraft.tmp 1
+execute if score use_tools turtlecraft.options matches 1 if predicate turtlecraft:sneak unless data entity @s SelectedItem unless data entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] {equipment:{mainhand:{id:"minecraft:red_stained_glass_pane"}}} run scoreboard players set $action turtlecraft.tmp 1
 
 
 # Actions

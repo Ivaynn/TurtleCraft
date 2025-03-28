@@ -2,7 +2,7 @@
 
 
 # Try to replace the item in the decor slot
-execute store success score $llama_item turtlecraft.tmp run data modify entity @s body_armor_item set from entity @s equipment.mainhand
+execute store success score $llama_item turtlecraft.tmp run data modify entity @s equipment.body set from entity @s equipment.mainhand
 execute if score $llama_item turtlecraft.tmp matches 0 run return 1
 
 
