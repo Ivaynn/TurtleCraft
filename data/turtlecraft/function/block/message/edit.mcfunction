@@ -13,5 +13,6 @@ function turtlecraft:block/message/lines
 
 function turtlecraft:block/message/commands_prepare
 
+scoreboard players reset chars turtlecraft.tmp
 data remove storage turtlecraft:tmp temp
 function turtlecraft:block/message/bar
