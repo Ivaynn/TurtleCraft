@@ -1,0 +1,1 @@
+give @s minecraft:crafter[lock={components:{"minecraft:custom_data":{turtlecraft.block:{id:-1,Instructions:[{}]}}}},minecraft:block_entity_data={id:"minecraft:crafter",disabled_slots:[I;0,1,2,3,4,5,6,7,8]},minecraft:item_model="minecraft:command_block",minecraft:custom_name='{"text":"Server","color":"aqua","italic": false}']

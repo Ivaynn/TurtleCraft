@@ -1,0 +1,12 @@
+{
+    "values": [
+        "turtlecraft:commands/say",
+        "turtlecraft:commands/tree",
+        "turtlecraft:commands/tellraw",
+        "turtlecraft:commands/scoreboard",
+        "turtlecraft:commands/party",
+        "turtlecraft:commands/variable",
+        "turtlecraft:commands/amogus",
+        "turtlecraft:commands/meow"
+    ]
+}

@@ -11,6 +11,12 @@ function turtlecraft:forceload
 
 
 # Scores
+scoreboard objectives add turtlecraft.server dummy
+scoreboard objectives add turtlecraft.s.page dummy
+scoreboard objectives add turtlecraft.s.mode dummy
+scoreboard objectives add turtlecraft.s.line dummy
+scoreboard objectives add turtlecraft.s.id dummy
+
 scoreboard objectives add turtlecraft.id dummy
 scoreboard objectives add turtlecraft.update_id dummy
 scoreboard objectives add turtlecraft.line dummy
