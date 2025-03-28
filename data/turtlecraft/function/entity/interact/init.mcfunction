@@ -17,8 +17,8 @@ execute at @s as @a[distance=..10,tag=!turtlecraft.player] if score @s turtlecra
 
 # Check if turtle is locked and has an owner (if it's not busy)
 scoreboard players set $turtle_lock turtlecraft.tmp 0
-execute if score $turtle_busy turtlecraft.tmp matches 0 if score locked_turtles turtlecraft.options matches 1 store result score $turtle_lock turtlecraft.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions[0].Locked 1
-execute if score $turtle_busy turtlecraft.tmp matches 0 if score locked_turtles turtlecraft.options matches 1 unless data entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Owner run scoreboard players set $turtle_lock turtlecraft.tmp 0
+execute if score $turtle_busy turtlecraft.tmp matches 0 if score locked_turtles turtlecraft.options matches 1 store result score $turtle_lock turtlecraft.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions[0].Locked 1
+execute if score $turtle_busy turtlecraft.tmp matches 0 if score locked_turtles turtlecraft.options matches 1 unless data entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Owner run scoreboard players set $turtle_lock turtlecraft.tmp 0
 
 
 # If turtle is not busy and is locked, check owner

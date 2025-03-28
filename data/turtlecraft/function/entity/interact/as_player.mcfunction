@@ -11,7 +11,7 @@ execute as @a[tag=!turtlecraft.player] if score @s turtlecraft.id = @p[tag=turtl
 
 
 # If turtle has no owner, this player is the new one
-execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] unless data entity @s ArmorItems[0].components."minecraft:custom_data".turtlecraft.Owner run function turtlecraft:entity/interact/new_owner
+execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] unless data entity @s equipment.feet.components."minecraft:custom_data".turtlecraft.Owner run function turtlecraft:entity/interact/new_owner
 
 
 # Choose action from player items/sneak

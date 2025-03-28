@@ -3,7 +3,7 @@
 
 
 # Create temporary storage + get line count
-data modify storage turtlecraft:tmp Instructions set from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions
+data modify storage turtlecraft:tmp Instructions set from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions
 execute store result score $line_count turtlecraft.tmp run data get storage turtlecraft:tmp Instructions
 scoreboard players remove $line_count turtlecraft.tmp 1
 

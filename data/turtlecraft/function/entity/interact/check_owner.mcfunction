@@ -2,7 +2,7 @@
 
 
 # If turtle is locked - check player UUID
-data modify storage turtlecraft:tmp uuid.owner set from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Owner.UUID
+data modify storage turtlecraft:tmp uuid.owner set from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Owner.UUID
 data modify storage turtlecraft:tmp uuid.self set from entity @s UUID
 execute store success score $different_uuid turtlecraft.tmp run data modify storage turtlecraft:tmp uuid.owner set from storage turtlecraft:tmp uuid.self
 

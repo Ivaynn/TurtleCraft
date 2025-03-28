@@ -16,7 +16,7 @@ execute unless score ride_turtles turtlecraft.options matches 1 on passengers if
 
 
 # Create temporary storage
-data modify storage turtlecraft:tmp Instructions set from entity @s ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions
+data modify storage turtlecraft:tmp Instructions set from entity @s equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions
 execute store result score $line_count turtlecraft.tmp run data get storage turtlecraft:tmp Instructions
 scoreboard players remove $line_count turtlecraft.tmp 1
 

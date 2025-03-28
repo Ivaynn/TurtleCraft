@@ -2,7 +2,7 @@
 
 
 ## FIND COUNTER
-data modify storage turtlecraft:tmp Counters set from entity @s ArmorItems[3].components."minecraft:custom_data".turtlecraft.Counters
+data modify storage turtlecraft:tmp Counters set from entity @s equipment.head.components."minecraft:custom_data".turtlecraft.Counters
 data modify storage turtlecraft:tmp list_end set from storage turtlecraft:tmp Counters
 
 

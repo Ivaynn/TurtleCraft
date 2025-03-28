@@ -12,7 +12,7 @@ execute store result score $item_index turtlecraft.tmp run data get storage turt
 
 # Get hand item
 execute if data storage turtlecraft:tmp {run_line:{A:{item:"tool"}}} run scoreboard players set $item_index turtlecraft.tmp -1
-execute if data storage turtlecraft:tmp {run_line:{A:{item:"tool"}}} run data modify storage turtlecraft:tmp run_line.A.item set from entity @s HandItems[0].id
+execute if data storage turtlecraft:tmp {run_line:{A:{item:"tool"}}} run data modify storage turtlecraft:tmp run_line.A.item set from entity @s equipment.mainhand.id
 
 
 # Tool

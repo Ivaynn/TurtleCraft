@@ -25,7 +25,7 @@ execute if score $line_count turtlecraft.tmp < max_length turtlecraft.options ru
 
 
 # Save instructions to entity
-execute if score $line_count turtlecraft.tmp < max_length turtlecraft.options run data modify entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions set from storage turtlecraft:tmp Instructions
+execute if score $line_count turtlecraft.tmp < max_length turtlecraft.options run data modify entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions set from storage turtlecraft:tmp Instructions
 
 
 # Clear tmp

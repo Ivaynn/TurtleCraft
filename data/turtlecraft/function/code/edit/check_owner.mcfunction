@@ -2,8 +2,8 @@
 
 
 # If turtle is locked - check player UUID
-execute store result score $turtle_lock turtlecraft.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions[0].Locked 1
-execute if score $turtle_lock turtlecraft.tmp matches 1 run data modify storage turtlecraft:tmp uuid.owner set from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Owner.UUID
+execute store result score $turtle_lock turtlecraft.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions[0].Locked 1
+execute if score $turtle_lock turtlecraft.tmp matches 1 run data modify storage turtlecraft:tmp uuid.owner set from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Owner.UUID
 execute if score $turtle_lock turtlecraft.tmp matches 1 run data modify storage turtlecraft:tmp uuid.self set from entity @s UUID
 execute if score $turtle_lock turtlecraft.tmp matches 1 store success score $different_uuid turtlecraft.tmp run data modify storage turtlecraft:tmp uuid.owner set from storage turtlecraft:tmp uuid.self
 

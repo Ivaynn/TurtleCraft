@@ -1,7 +1,7 @@
 # Executed by turtlecraft.body - all attached entities have "turtlecraft.tmp"
 
 # Reset nbt
-execute store result score $silent turtlecraft.tmp run data get entity @s ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions[0].Silent 1
+execute store result score $silent turtlecraft.tmp run data get entity @s equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions[0].Silent 1
 execute unless score $silent turtlecraft.tmp matches 1 unless data entity @s {Fire:-1s} run playsound minecraft:entity.generic.extinguish_fire neutral @a ~ ~ ~ 1 1
 data modify entity @s Fire set value -1s
 

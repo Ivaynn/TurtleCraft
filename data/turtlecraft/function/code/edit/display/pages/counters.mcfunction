@@ -8,13 +8,13 @@ tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 
 
 # Header
-tellraw @s [{"text":"","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -206"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to refresh","color":"gray"}]}},{"text":" Counters  ","color":"dark_aqua"},{"text":" R \n","color":"aqua"}]
+tellraw @s [{"text":"","click_event":{action:"run_command",command:"/trigger TurtleCraft set -206"},"hover_event":{action:"show_text",value:[{"text":"Click to refresh","color":"gray"}]}},{"text":" Counters  ","color":"dark_aqua"},{"text":" R \n","color":"aqua"}]
 
 
 # Print counters <name>: <value>
-data modify storage turtlecraft:tmp Counters set from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[3].components."minecraft:custom_data".turtlecraft.Counters
+data modify storage turtlecraft:tmp Counters set from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.head.components."minecraft:custom_data".turtlecraft.Counters
 execute store result score $counter_index turtlecraft.tmp run data get storage turtlecraft:tmp Counters
-execute if score $counter_index turtlecraft.tmp matches 0 run tellraw @s [" ",{"text":"Empty list","color":"gray","italic":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Use the ","color":"gray"},{"text":"counter","color":"#FD93FD"},{"text":" instruction\nto see a list of counters here","color":"gray"}]}}]
+execute if score $counter_index turtlecraft.tmp matches 0 run tellraw @s [" ",{"text":"Empty list","color":"gray","italic":true,"hover_event":{action:"show_text",value:[{"text":"Use the ","color":"gray"},{"text":"counter","color":"#FD93FD"},{"text":" instruction\nto see a list of counters here","color":"gray"}]}}]
 
 execute if score limit_counter_display turtlecraft.options matches 1 if score $counter_index turtlecraft.tmp matches 11.. run scoreboard players operation $display_more turtlecraft.tmp = $counter_index turtlecraft.tmp
 execute if score limit_counter_display turtlecraft.options matches 1 if score $counter_index turtlecraft.tmp matches 11.. run scoreboard players remove $display_more turtlecraft.tmp 14
@@ -30,10 +30,10 @@ data remove storage turtlecraft:tmp Counters
 scoreboard players reset $counter_index turtlecraft.tmp
 scoreboard players reset $display_more turtlecraft.tmp
 
-data modify entity @e[limit=1,type=minecraft:text_display,tag=turtlecraft.tmp,tag=turtlecraft.text] text set value '{"text":""}'
+data modify entity @e[limit=1,type=minecraft:text_display,tag=turtlecraft.tmp,tag=turtlecraft.text] text set value {"text":""}
 scoreboard players reset $convert_str turtlecraft.tmp
 data remove storage turtlecraft:tmp json_arg
 
 
 # Tabs
-tellraw @s ["\n",{"text":"HOME ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -100"},"hoverEvent":{"action":"show_text","contents":[{"text":"Home Page","color":"gray"}]}},{"text":" EDIT ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -500"},"hoverEvent":{"action":"show_text","contents":[{"text":"Edit Saved Instructions","color":"gray"}]}},{"text":" COUNTERS ","color":"dark_aqua"},{"text":" OPTIONS ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -207"},"hoverEvent":{"action":"show_text","contents":[{"text":"Other Options","color":"gray"}]}},{"text":" MORE ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TurtleCraft set -208"},"hoverEvent":{"action":"show_text","contents":[{"text":"Credits and Tutorials","color":"gray"}]}}]
+tellraw @s ["\n",{"text":"HOME ","color":"aqua","click_event":{action:"run_command",command:"/trigger TurtleCraft set -100"},"hover_event":{action:"show_text",value:[{"text":"Home Page","color":"gray"}]}},{"text":" EDIT ","color":"aqua","click_event":{action:"run_command",command:"/trigger TurtleCraft set -500"},"hover_event":{action:"show_text",value:[{"text":"Edit Saved Instructions","color":"gray"}]}},{"text":" COUNTERS ","color":"dark_aqua"},{"text":" OPTIONS ","color":"aqua","click_event":{action:"run_command",command:"/trigger TurtleCraft set -207"},"hover_event":{action:"show_text",value:[{"text":"Other Options","color":"gray"}]}},{"text":" MORE ","color":"aqua","click_event":{action:"run_command",command:"/trigger TurtleCraft set -208"},"hover_event":{action:"show_text",value:[{"text":"Credits and Tutorials","color":"gray"}]}}]

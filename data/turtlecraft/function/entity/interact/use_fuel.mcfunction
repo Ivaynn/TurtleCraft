@@ -35,7 +35,7 @@ execute if score $fuel_power turtlecraft.tmp matches 1.. run item modify entity 
 
 
 # Effects
-execute store result score $silent turtlecraft.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions[0].Silent 1
+execute store result score $silent turtlecraft.tmp run data get entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions[0].Silent 1
 execute unless score $silent turtlecraft.tmp matches 1 if score $fuel_power turtlecraft.tmp matches 1.. at @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] run playsound minecraft:block.fire.extinguish neutral @a ~ ~1 ~ 1 1.8
 execute if score $fuel_power turtlecraft.tmp matches 1.. at @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] run particle minecraft:flame ~ ~1.5 ~ 0.25 0.25 0.25 0.05 5 normal @a
 

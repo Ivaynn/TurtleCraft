@@ -15,6 +15,7 @@ Please note that this is an ongoing project that will be improved over time. If 
 
 
 ## Download
+- Minecraft 1.21.5 → [TurtleCraft 1.2.0]()
 - Minecraft 1.21 → [TurtleCraft 1.1.0](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.1.0)
 - Minecraft 1.20.4 → [TurtleCraft 1.0.3](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.0.3)
 - Minecraft 1.19.4 → [TurtleCraft 1.0.0](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.0)
@@ -27,7 +28,7 @@ Please note that this is an ongoing project that will be improved over time. If 
 - [Wiki](https://github.com/Ivaynn/TurtleCraft/wiki) - documentation with examples and tutorials
 - [Introduction video](https://youtu.be/b-ld-X8mnps) - short demonstration of how to use the data pack
 - [Discord](https://discord.gg/QAtc7ZgPxS) - help & feedback
-- [Planet Minecraft](https://www.planetminecraft.com/data-pack/turtlecraft-programmable-turtles/) - screenshots and download
+- [Planet Minecraft](https://www.planetminecraft.com/data-pack/turtlecraft-programmable-turtles/) and [Modrinth]() - screenshots and download
 
 
 <br>
@@ -52,7 +53,7 @@ Please note that this is an ongoing project that will be improved over time. If 
 
 ## Compatibility Notes
 
-- Made for Minecraft Java Edition, from 1.19.4 to 1.21
+- Made for Minecraft Java Edition, from 1.19.4 to 1.21.5
 - Every scoreboard objective, tag and data storage uses the `turtlecraft` prefix
 - Blocks at `10028 0 10028` and `10028 1 10028` in every vanilla dimension are replaced with bedrock when the data pack needs to use them. These chunks are force loaded
 - Some parts of this data pack need to be updated for every new Minecraft version, making it incompatible until a new version of the data pack is released

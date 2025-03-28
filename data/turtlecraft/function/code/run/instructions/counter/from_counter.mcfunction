@@ -1,6 +1,6 @@
 
 # Get list
-data modify storage turtlecraft:tmp counter_src set from entity @s ArmorItems[3].components."minecraft:custom_data".turtlecraft.Counters
+data modify storage turtlecraft:tmp counter_src set from entity @s equipment.head.components."minecraft:custom_data".turtlecraft.Counters
 
 
 # Iterate: for every counter in list, check if its name matches the one in run_line

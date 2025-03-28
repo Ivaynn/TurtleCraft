@@ -13,18 +13,18 @@ execute if score $valid_item turtlecraft.tmp matches 1 run data modify storage t
 
 
 # Give llama's item to player
-execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] if predicate turtlecraft:holding_equipment run data remove entity @s HandItems[0].components."minecraft:custom_data".turtlecraft
-execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] unless predicate turtlecraft:holding_equipment run data remove entity @s HandItems[0]
+execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] if predicate turtlecraft:holding_equipment run data remove entity @s equipment.mainhand.components."minecraft:custom_data".turtlecraft
+execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] unless predicate turtlecraft:holding_equipment run data remove entity @s equipment.mainhand
 item replace entity @s weapon.mainhand from entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] weapon
 
 
 # Give stored item to llama
-execute if score $valid_item turtlecraft.tmp matches 1 run data modify entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] HandItems[0] set from storage turtlecraft:tmp switch_item
-execute if score $valid_item turtlecraft.tmp matches 0 run data remove entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] HandItems[0]
+execute if score $valid_item turtlecraft.tmp matches 1 run data modify entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.mainhand set from storage turtlecraft:tmp switch_item
+execute if score $valid_item turtlecraft.tmp matches 0 run data remove entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.mainhand
 
 
 # Empty item
-execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] unless data entity @s HandItems[0].id run function turtlecraft:entity/empty_item_slot
+execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] unless data entity @s equipment.mainhand.id run function turtlecraft:entity/empty_item_slot
 
 
 # Update visual item

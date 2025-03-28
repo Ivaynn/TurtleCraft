@@ -1,3 +1,3 @@
 # Admin function - executed by player directly at any time
 
-tellraw @s ["",{"text":"\n WARNING: ","color":"red"},{"text":"doing this will stop the data pack and remove every turtle in loaded chunks! Are you sure? ","color":"gray"},{"text":"Yes","color":"red","clickEvent":{"action":"run_command","value":"/function turtlecraft:uninstall"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click here to uninstall","color":"gray"}]}},"\n"]
+tellraw @s ["",{"text":"\n WARNING: ","color":"red"},{"text":"doing this will stop the data pack and remove every turtle in loaded chunks! Are you sure? ","color":"gray"},{"text":"Yes","color":"red","click_event":{action:"run_command",command:"/function turtlecraft:uninstall"},"hover_event":{action:"show_text",value:[{"text":"Click here to uninstall","color":"gray"}]}},"\n"]

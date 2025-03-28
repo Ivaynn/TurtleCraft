@@ -13,7 +13,7 @@ execute if data storage turtlecraft:tmp {run_line:{A:{block:"powder_snow"}}} run
 
 # Check what item drops with silk touch
 execute if score $if_success turtlecraft.tmp matches 0 run setblock 10028 0 10028 minecraft:barrel
-execute if score $if_success turtlecraft.tmp matches 0 run loot insert 10028 0 10028 mine ~ ~ ~ minecraft:shears[minecraft:custom_data={turtlecraft:{IfBlock:1b}},enchantments={levels:{"minecraft:silk_touch":1}}]
+execute if score $if_success turtlecraft.tmp matches 0 run loot insert 10028 0 10028 mine ~ ~ ~ minecraft:shears[minecraft:custom_data={turtlecraft:{IfBlock:1b}},enchantments={"minecraft:silk_touch":1}]
 
 
 # Check if dropped item id is the same that's stored on the condition

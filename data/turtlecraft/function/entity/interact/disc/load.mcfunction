@@ -8,4 +8,4 @@ execute as @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.b
 
 
 # Copy disc data to turtle
-data modify entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Instructions set from entity @s SelectedItem.components."minecraft:custom_data".turtlecraft.Instructions
+data modify entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions set from entity @s SelectedItem.components."minecraft:custom_data".turtlecraft.Instructions

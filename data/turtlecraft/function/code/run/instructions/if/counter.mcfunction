@@ -6,7 +6,7 @@ scoreboard players set $if_success turtlecraft.tmp 0
 
 ## GET VALUE
 # Get list of counters
-data modify storage turtlecraft:tmp Counters set from entity @s ArmorItems[3].components."minecraft:custom_data".turtlecraft.Counters
+data modify storage turtlecraft:tmp Counters set from entity @s equipment.head.components."minecraft:custom_data".turtlecraft.Counters
 
 
 # Iterate: for every counter in list, check if its name matches the one in run_line

@@ -19,14 +19,14 @@ tag @s remove tc.egg
 
 
 # NBT
-data modify entity @s[tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft set from entity @s ArmorItems[0].components."minecraft:custom_data".tc
-data remove entity @s[tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".tc
+data modify entity @s[tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft set from entity @s equipment.feet.components."minecraft:custom_data".tc
+data remove entity @s[tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".tc
 
-data modify entity @s[tag=turtlecraft.body] ArmorItems[3].components."minecraft:custom_data".turtlecraft set from entity @s ArmorItems[3].components."minecraft:custom_data".tc
-data remove entity @s[tag=turtlecraft.body] ArmorItems[3].components."minecraft:custom_data".tc
+data modify entity @s[tag=turtlecraft.body] equipment.head.components."minecraft:custom_data".turtlecraft set from entity @s equipment.head.components."minecraft:custom_data".tc
+data remove entity @s[tag=turtlecraft.body] equipment.head.components."minecraft:custom_data".tc
 
-data modify entity @s[tag=turtlecraft.body] HandItems[0].components."minecraft:custom_data".turtlecraft set from entity @s HandItems[0].components."minecraft:custom_data".tc
-data remove entity @s[tag=turtlecraft.body] HandItems[0].components."minecraft:custom_data".tc
+data modify entity @s[tag=turtlecraft.body] equipment.mainhand.components."minecraft:custom_data".turtlecraft set from entity @s equipment.mainhand.components."minecraft:custom_data".tc
+data remove entity @s[tag=turtlecraft.body] equipment.mainhand.components."minecraft:custom_data".tc
 
 data modify entity @s[tag=turtlecraft.item] item.components."minecraft:custom_data".turtlecraft set from entity @s item.components."minecraft:custom_data".tc
 data remove entity @s[tag=turtlecraft.item] item.components."minecraft:custom_data".tc

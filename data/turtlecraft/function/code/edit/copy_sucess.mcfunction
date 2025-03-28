@@ -12,7 +12,7 @@ data modify storage turtlecraft:tmp Clipboard set from storage turtlecraft:tmp l
 
 
 # Save to clipboard
-data modify entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] ArmorItems[0].components."minecraft:custom_data".turtlecraft.Clipboard set from storage turtlecraft:tmp Clipboard
+data modify entity @e[limit=1,type=minecraft:llama,tag=turtlecraft.tmp,tag=turtlecraft.body] equipment.feet.components."minecraft:custom_data".turtlecraft.Clipboard set from storage turtlecraft:tmp Clipboard
 
 
 # Clear tmp
