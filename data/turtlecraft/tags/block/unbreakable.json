@@ -18,6 +18,8 @@
     "minecraft:void_air",
     "minecraft:cave_air",
     "minecraft:structure_block",
-    "minecraft:jigsaw"
+    "minecraft:jigsaw",
+    "minecraft:test_block",
+    "minecraft:test_instance_block"
   ]
 }

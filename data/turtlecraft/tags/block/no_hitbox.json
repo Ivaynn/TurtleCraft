@@ -18,6 +18,9 @@
     "minecraft:short_grass",
     "minecraft:fern",
     "minecraft:dead_bush",
+    "minecraft:bush",
+    "minecraft:short_dry_grass",
+    "minecraft:tall_dry_grass",
     "minecraft:seagrass",
     "minecraft:tall_seagrass",
     "minecraft:moving_piston",
@@ -92,6 +95,7 @@
     "minecraft:redstone_wall_torch",
     "minecraft:stone_button",
     "minecraft:snow",
+    "minecraft:cactus_flower",
     "minecraft:sugar_cane",
     "minecraft:soul_torch",
     "minecraft:soul_wall_torch",
@@ -228,12 +232,15 @@
     "minecraft:cave_vines_plant",
     "minecraft:spore_blossom",
     "minecraft:pink_petals",
+    "minecraft:wildflowers",
+    "minecraft:leaf_litter",
     "minecraft:big_dripleaf_stem",
     "minecraft:small_dripleaf",
     "minecraft:hanging_roots",
     "minecraft:frogspawn",
     "minecraft:pale_hanging_moss",
     "minecraft:open_eyeblossom",
-    "minecraft:closed_eyeblossom"
+    "minecraft:closed_eyeblossom",
+    "minecraft:firefly_bush"
   ]
 }
