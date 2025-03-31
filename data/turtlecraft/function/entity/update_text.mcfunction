@@ -9,11 +9,11 @@ execute if score $text_id turtlecraft.tmp matches 1.. run data modify entity @s 
 
 # Error messages
 execute if score $text_id turtlecraft.tmp matches 1 run data modify entity @s text set value {"text":"Inventory full!","color":"red"}
-execute if score $text_id turtlecraft.tmp matches 2 run data modify entity @s text set value {"text":"I can\'t move there!","color":"red"}
-execute if score $text_id turtlecraft.tmp matches 3 run data modify entity @s text set value {"text":"I can\'t mine this!","color":"red"}
-execute if score $text_id turtlecraft.tmp matches 4 run data modify entity @s text set value {"text":"I can\'t use this!","color":"red"}
+execute if score $text_id turtlecraft.tmp matches 2 run data modify entity @s text set value {"text":"I can't move there!","color":"red"}
+execute if score $text_id turtlecraft.tmp matches 3 run data modify entity @s text set value {"text":"I can't mine this!","color":"red"}
+execute if score $text_id turtlecraft.tmp matches 4 run data modify entity @s text set value {"text":"I can't use this!","color":"red"}
 execute if score $text_id turtlecraft.tmp matches 5 run data modify entity @s text set value {"text":"Item not found!","color":"red"}
-execute if score $text_id turtlecraft.tmp matches 6 run data modify entity @s text set value {"text":"This isn\'t a crop!","color":"red"}
+execute if score $text_id turtlecraft.tmp matches 6 run data modify entity @s text set value {"text":"This isn't a crop!","color":"red"}
 
 # Info
 execute if score $text_id turtlecraft.tmp matches 7 run data modify entity @s text set value {"text":"Paused!","color":"blue"}

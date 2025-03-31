@@ -25,12 +25,6 @@
                             "name": "Turtle"
                         },
                         {
-                            "function": "minecraft:set_name",
-                            "entity": "this",
-                            "target": "custom_name",
-                            "name": "Turtle"
-                        },
-                        {
                             "function": "minecraft:set_lore",
                             "entity": "this",
                             "lore": [
