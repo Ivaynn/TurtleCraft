@@ -1,11 +1,11 @@
 
 # TurtleCraft
 
-This Minecraft data pack adds turtles that can be programmed to automate tasks, inspired by the "ComputerCraft" mod. With a simplified and user-friendly approach to turtle programming, this data pack can be enjoyed by everyone. It can be used on servers and includes features designed for multiplayer interactions.
+This Minecraft data pack adds turtles that can be programmed to automate tasks, inspired by the "ComputerCraft" mod. You can use a chat menu to create your own programs or load some of the examples!
 
-The optimization goal was to support multiple turtles running at once on a small server. For larger scales, the data pack includes performance options that can be adjusted in-game to limit potential lag caused by the turtles.
+TurtleCraft can be installed in servers and includes features designed for multiplayer interactions. It supports multiple turtles running simultaneously on a small server and, for larger scales, there are multiple performance options that can be adjusted in-game.
 
-Please note that this is an ongoing project that will be improved over time. If you come across any bugs or issues, please contact me via [Discord](https://discord.gg/QAtc7ZgPxS). You can also use this server to share programs or just chat!
+If you find an issue or have a suggestion, you can [create an issue](https://github.com/Ivaynn/TurtleCraft/issues) or join the [Discord server](https://discord.gg/QAtc7ZgPxS). You can also use this server to share programs or just chat! You can contribute directly by creating a pull request.
 
 
 
@@ -15,7 +15,7 @@ Please note that this is an ongoing project that will be improved over time. If 
 
 
 ## Download
-- Minecraft 1.21.5 → [TurtleCraft 1.2.0]()
+- Minecraft 1.21.5 → [TurtleCraft 1.2.0](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.2.0)
 - Minecraft 1.21 → [TurtleCraft 1.1.0](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.1.0)
 - Minecraft 1.20.4 → [TurtleCraft 1.0.3](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.0.3)
 - Minecraft 1.19.4 → [TurtleCraft 1.0.0](https://github.com/Ivaynn/TurtleCraft/releases/tag/v1.0)
@@ -27,8 +27,8 @@ Please note that this is an ongoing project that will be improved over time. If 
 ## Links & tutorials
 - [Wiki](https://github.com/Ivaynn/TurtleCraft/wiki) - documentation with examples and tutorials
 - [Introduction video](https://youtu.be/b-ld-X8mnps) - short demonstration of how to use the data pack
-- [Discord](https://discord.gg/QAtc7ZgPxS) - help & feedback
-- [Planet Minecraft](https://www.planetminecraft.com/data-pack/turtlecraft-programmable-turtles/) and [Modrinth]() - screenshots and download
+- [Discord](https://discord.gg/QAtc7ZgPxS) - help and feedback
+- [Planet Minecraft](https://www.planetminecraft.com/data-pack/turtlecraft-programmable-turtles/) and [Modrinth](https://modrinth.com/project/turtlecraft-programmable-turtles) - screenshots and download
 
 
 <br>
@@ -40,7 +40,7 @@ Please note that this is an ongoing project that will be improved over time. If 
 - In-game program editor using chat menus
 - Basic instructions for mining, farming, building, etc.
 - Advanced instructions for conditions, loops and variables
-- Ability to import programs from outside of the game
+- Export and share your programs with others
 - An inventory system, allowing turtles to interact with items and blocks
 - Support for equipped tools, allowing turtles to use them in their tasks
 - Customization options for the turtle's appearance and behavior
@@ -64,4 +64,4 @@ Please note that this is an ongoing project that will be improved over time. If 
 
 ## License
 
-MIT license, see the [LICENSE](LICENSE) file for details.
+MIT license, check [LICENSE](LICENSE) for more details.
