@@ -2,7 +2,7 @@
 
 
 # Remove tag from held item
-setblock 10028 0 10028 minecraft:yellow_shulker_box
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[]}
 item replace block 10028 0 10028 container.0 from entity @s weapon.mainhand
 data remove block 10028 0 10028 Items[0].components."minecraft:custom_data"
 data remove block 10028 0 10028 Items[0].components."minecraft:enchantment_glint_override"

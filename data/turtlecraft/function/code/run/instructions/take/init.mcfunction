@@ -7,7 +7,7 @@ data modify storage turtlecraft:tmp block_items set from block ~ ~ ~ Items
 data remove block ~ ~ ~ Items
 execute store result score $block_slots turtlecraft.tmp run data get storage turtlecraft:tmp block_items
 
-setblock 10028 1 10028 minecraft:yellow_shulker_box
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[]}
 execute if score $block_slots turtlecraft.tmp matches 1.. run function turtlecraft:code/run/instructions/take/for_block_slot
 
 

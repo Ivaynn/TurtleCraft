@@ -23,10 +23,10 @@ function turtlecraft:code/run/instructions/use/item/list_merge
 
 
 # Give items back to llama
-setblock 10028 1 10028 minecraft:yellow_shulker_box
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[]}
 data modify block 10028 1 10028 Items set from storage turtlecraft:tmp llama_items
 
-setblock 10028 0 10028 minecraft:yellow_shulker_box
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[]}
 loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 loot replace entity @s horse.0 15 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 

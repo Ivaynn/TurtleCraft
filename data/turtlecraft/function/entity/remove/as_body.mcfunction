@@ -2,7 +2,7 @@
 
 # Drop: Inventory
 setblock 10028 0 10028 minecraft:bedrock
-setblock 10028 0 10028 minecraft:yellow_shulker_box
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[]}
 data modify block 10028 0 10028 Items set from entity @s Items
 
 # Drop: Held item
@@ -15,7 +15,7 @@ execute if data entity @s equipment.mainhand.id run loot insert 10028 0 10028 mi
 
 # Drop: Egg
 setblock 10028 1 10028 minecraft:bedrock
-setblock 10028 1 10028 minecraft:yellow_shulker_box
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[]}
 loot insert 10028 1 10028 loot turtlecraft:egg
 data modify block 10028 1 10028 Items[0].components."minecraft:custom_name" set from entity @s CustomName
 data modify block 10028 1 10028 Items[0].components."minecraft:entity_data".data.turtlecraft.Instructions set from entity @s equipment.feet.components."minecraft:custom_data".turtlecraft.Instructions

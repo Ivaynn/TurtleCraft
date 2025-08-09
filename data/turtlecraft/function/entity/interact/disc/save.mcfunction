@@ -14,7 +14,7 @@ data modify storage turtlecraft:tmp item.components."minecraft:rarity" set value
 
 
 # Replace item in player's hands with item from storage
-setblock 10028 0 10028 minecraft:yellow_shulker_box
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[]}
 item replace block 10028 0 10028 container.0 with minecraft:stone
 data modify block 10028 0 10028 Items[0] set from storage turtlecraft:tmp item
 loot replace entity @s weapon.mainhand 1 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]

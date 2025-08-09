@@ -6,7 +6,7 @@ execute if score $chunk_loaded turtlecraft.tmp matches 0 run return 0
 data modify storage turtlecraft:tmp llama_items set from entity @s Items
 execute store result score $llama_slots turtlecraft.tmp run data get storage turtlecraft:tmp llama_items
 
-setblock 10028 1 10028 minecraft:yellow_shulker_box
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[]}
 execute if score $llama_slots turtlecraft.tmp matches 1.. run function turtlecraft:code/run/instructions/insert/for_llama_slot
 
 

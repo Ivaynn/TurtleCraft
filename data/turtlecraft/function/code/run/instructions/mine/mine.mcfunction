@@ -2,13 +2,13 @@
 
 
 # Create shulker with the inventory items
-setblock 10028 1 10028 minecraft:yellow_shulker_box
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[]}
 data modify storage turtlecraft:tmp llama_items set from entity @s Items
 data modify block 10028 1 10028 Items set from storage turtlecraft:tmp llama_items
 
 
 # Transfer all items to a second shulker, that way they start at slot 0 (llama inventory start at slot 2 for some reason)
-setblock 10028 0 10028 minecraft:yellow_shulker_box
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[]}
 loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 

@@ -32,13 +32,13 @@ execute if block ~ ~ ~ minecraft:cave_vines[age=25] run setblock ~ ~ ~ minecraft
 
 
 # Create shulker with the inventory items
-setblock 10028 1 10028 minecraft:yellow_shulker_box
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[]}
 data modify storage turtlecraft:tmp llama_items set from entity @s Items
 data modify block 10028 1 10028 Items set from storage turtlecraft:tmp llama_items
 
 
 # Create a second shulker, insert items from llama into that shulker, add berries
-setblock 10028 0 10028 minecraft:yellow_shulker_box
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[]}
 loot insert 10028 0 10028 mine 10028 1 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 setblock 10028 1 10028 minecraft:bedrock
 setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[{Slot:0b,id:"minecraft:glow_berries",count:1b}]}

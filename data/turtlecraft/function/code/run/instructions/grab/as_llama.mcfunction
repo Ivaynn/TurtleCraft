@@ -7,9 +7,9 @@ scoreboard players operation $llama_count_start turtlecraft.tmp = $llama_item_co
 
 
 # Put all llama items in shulker box
-setblock 10028 0 10028 minecraft:yellow_shulker_box
+setblock 10028 0 10028 minecraft:yellow_shulker_box{Items:[]}
 data modify block 10028 0 10028 Items set from entity @s Items
-setblock 10028 1 10028 minecraft:yellow_shulker_box
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[]}
 loot insert 10028 1 10028 mine 10028 0 10028 minecraft:stone[minecraft:custom_data={drop_contents:1b}]
 
 

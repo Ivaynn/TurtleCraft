@@ -5,7 +5,7 @@ data modify storage turtlecraft:tmp llama_items set from entity @s Items
 execute store result score $llama_slots turtlecraft.tmp run data get storage turtlecraft:tmp llama_items
 
 scoreboard players set $fuel.bucket.count turtlecraft.tmp 0
-setblock 10028 1 10028 minecraft:yellow_shulker_box
+setblock 10028 1 10028 minecraft:yellow_shulker_box{Items:[]}
 execute if score $llama_slots turtlecraft.tmp matches 1.. run function turtlecraft:code/run/instructions/fuel/for_slot
 
 
