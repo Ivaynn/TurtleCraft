@@ -14,6 +14,6 @@ scoreboard players reset $different_id turtlecraft.tmp
 
 
 # Iterate
-# data remove storage turtlecraft:tmp block_items[0]
+data remove storage turtlecraft:tmp block_items[0]
 scoreboard players remove $block_slots turtlecraft.tmp 1
 execute if score $block_slots turtlecraft.tmp matches 1.. run function turtlecraft:code/run/instructions/take/for_block_slot

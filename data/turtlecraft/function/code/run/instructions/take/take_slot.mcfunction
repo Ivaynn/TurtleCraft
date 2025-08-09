@@ -39,5 +39,5 @@ execute store result score $block_item_count turtlecraft.tmp run data get storag
 scoreboard players operation $block_item_count turtlecraft.tmp -= $llama_item_count turtlecraft.tmp
 
 execute store result storage turtlecraft:tmp block_items[0].count byte 1 run scoreboard players get $block_item_count turtlecraft.tmp
-execute unless score $block_item_count turtlecraft.tmp matches 1.. run return run data remove storage turtlecraft:tmp block_items[0]
+execute unless score $block_item_count turtlecraft.tmp matches 1.. run return 0
 data modify storage turtlecraft:tmp extra_items append from storage turtlecraft:tmp block_items[0]
